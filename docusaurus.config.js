@@ -10,12 +10,8 @@ module.exports = {
   organizationName: 'redteam.guide', // Usually your GitHub org/user name.
   projectName: 'redteamguide', // Usually your repo name.
   themeConfig: {
-    googleAnalytics: {
-      trackingID: 'UA-156693847-1',
-      // Optional fields.
-      anonymizeIP: true, // Should IPs be anonymized?
-    },
-    metadatas: [
+    
+    metadata: [
       {name: 'twitter:card', content: 'summary'},
       {name: 'twitter:title', content: 'Red Team Development and Operations'},
       {name: 'twitter:description', content: 'A practical guide - by Joe Vest and James Tubberville'},
@@ -64,20 +60,20 @@ module.exports = {
 
       ],
     },
-    colorMode: {
-      defaultMode: "dark",
-      respectPrefersColorScheme: true,
-      switchConfig: {
-        darkIcon: "  ",
-        darkIconStyle: {
-          marginTop: "1px",
-        },
-        lightIcon: "  ",
-        lightIconStyle: {
-          marginTop: "1px",
-        },
-      },
-    },
+    // colorMode: {
+    //   defaultMode: "dark",
+    //   respectPrefersColorScheme: true,
+    //   switchConfig: {
+    //     darkIcon: "  ",
+    //     darkIconStyle: {
+    //       marginTop: "1px",
+    //     },
+    //     lightIcon: "  ",
+    //     lightIconStyle: {
+    //       marginTop: "1px",
+    //     },
+    //   },
+    // },
     prism: {
       theme: require("./src/blink"),
     },
@@ -149,6 +145,12 @@ module.exports = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
         },
+        gtag: {
+            trackingID: 'UA-156693847-1',
+          },
+          googleAnalytics: {
+            trackingID: 'UA-156693847-1',
+          },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
