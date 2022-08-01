@@ -9,6 +9,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'redteam.guide', // Usually your GitHub org/user name.
   projectName: 'redteamguide', // Usually your repo name.
+  trailingSlash: false,
   themeConfig: {
     googleAnalytics: {
       trackingID: 'UA-156693847-1',
