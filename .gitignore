@@ -25,6 +25,7 @@ packages/docusaurus-*/lib/*
 packages/eslint-plugin/lib/
 packages/stylelint-copyright/lib/
 
+build
 build/*
 
 website/netlifyDeployPreview/*
