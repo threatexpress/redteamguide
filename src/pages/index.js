@@ -46,7 +46,7 @@ export default function Home() {
         <h3>Amazon Book Reviews and In-depth Review by Open Security</h3>
 
           <div className="row">
-            <a href="https://www.amazon.com/Red-Team-Development-Operations-practical/dp/B083XVG633/ref=sr_1_1?crid=1USP7TO03RQOG&dchild=1&keywords=red+team+development+and+operations&qid=1634472764&sprefix=red+team+dev%2Caps%2C170&sr=8-1#customerReviews"><img src="/img/reviews.png"></img></a>
+            <a href="https://www.amazon.com/Red-Team-Development-Operations-practical/dp/B083XVG633/ref=sr_1_1?crid=1USP7TO03RQOG&dchild=1&keywords=red+team+development+and+operations&qid=1634472764&sprefix=red+team+dev%2Caps%2C170&sr=8-1#customerReviews"><img src="img/reviews.png"></img></a>
             <ReactPlayer url='https://www.youtube.com/watch?v=SQYBwVY8g9I'/>
 
           </div>
