@@ -7,7 +7,7 @@
 node_modules
 .yarn
 package-lock.json
-
+yarn.lock
 .eslintcache
 
 yarn-error.log
@@ -24,9 +24,6 @@ packages/docusaurus/lib/
 packages/docusaurus-*/lib/*
 packages/eslint-plugin/lib/
 packages/stylelint-copyright/lib/
-
-build
-build/*
 
 website/netlifyDeployPreview/*
 website/changelog
