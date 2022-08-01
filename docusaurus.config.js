@@ -3,7 +3,7 @@ module.exports = {
   title: 'Red Team Development and Operations',
   tagline: 'A Practical Guide',
   url: 'https://redteam.guide',
-  baseUrl: '/',
+  baseUrl: '/redteamguide/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
