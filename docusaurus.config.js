@@ -10,12 +10,12 @@ module.exports = {
   organizationName: 'redteam.guide', // Usually your GitHub org/user name.
   projectName: 'redteamguide', // Usually your repo name.
   themeConfig: {
-    
+
     metadata: [
-      {name: 'twitter:card', content: 'summary'},
-      {name: 'twitter:title', content: 'Red Team Development and Operations'},
-      {name: 'twitter:description', content: 'A practical guide - by Joe Vest and James Tubberville'},
-      {name: 'twitter:image', content: 'https://redteam.guide/img/books.png'}
+      { name: 'twitter:card', content: 'summary' },
+      { name: 'twitter:title', content: 'Red Team Development and Operations' },
+      { name: 'twitter:description', content: 'A practical guide - by Joe Vest and James Tubberville' },
+      { name: 'twitter:image', content: 'https://redteam.guide/img/books.png' }
     ],
     navbar: {
       title: 'REDTEAM.GUIDE',
@@ -41,7 +41,7 @@ module.exports = {
           docId: 'about_the_authors',
           position: 'left',
           label: 'About the Authors',
-        },        {
+        }, {
           type: 'doc',
           docId: 'definitions',
           position: 'left',
@@ -146,11 +146,11 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
         },
         gtag: {
-            trackingID: 'UA-156693847-1',
-          },
-          googleAnalytics: {
-            trackingID: 'UA-156693847-1',
-          },
+          trackingID: 'G-S9YDP7R6HD',
+        },
+        googleAnalytics: {
+          trackingID: 'G-S9YDP7R6HD',
+        },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
         },
@@ -158,3 +158,5 @@ module.exports = {
     ],
   ],
 };
+
+
