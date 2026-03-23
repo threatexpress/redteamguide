@@ -22,6 +22,9 @@ build
 # Logs
 yarn-error.log
 
+# Environment
+.env
+
 # Tools
 .playwright-mcp/
 .claude/
