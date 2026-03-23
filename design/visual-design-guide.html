@@ -1,0 +1,1191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>REDTEAM.GUIDE — Visual Design Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* =========================================================
+       DESIGN TOKENS
+       ========================================================= */
+    :root {
+      --bg-base: #011214;
+      --bg-surface: #06191c;
+      --bg-card: rgba(6, 25, 28, 0.7);
+      --bg-card-border: rgba(1, 181, 194, 0.15);
+
+      --accent-gold: #ffb800;
+      --accent-gold-hover: #f8bb00;
+      --accent-teal: #01b5c2;
+      --accent-teal-bright: #0ae0f0;
+
+      --text-primary: #e5e7eb;
+      --text-muted: #89a8aa;
+      --text-dim: #344647;
+
+      --border-subtle: #1a2e31;
+      --border-accent: #ffb800;
+
+      --danger: #6d2121;
+      --danger-bg: rgba(109, 33, 33, 0.08);
+      --success: #006d24;
+      --success-bg: rgba(0, 109, 36, 0.08);
+      --info: #005aad;
+      --info-bg: rgba(0, 90, 173, 0.08);
+      --warning: #c59700;
+      --warning-bg: rgba(197, 151, 0, 0.08);
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+
+      --shadow-glow: 0 0 20px rgba(10, 224, 240, 0.08);
+      --shadow-glow-hover: 0 4px 24px rgba(10, 224, 240, 0.15);
+
+      --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', 'Fira Code', monospace;
+    }
+
+    /* =========================================================
+       LIGHT MODE TOKENS
+       ========================================================= */
+    [data-theme="light"] {
+      --bg-base: #f5f7f7;
+      --bg-surface: #ffffff;
+      --bg-card: rgba(255, 255, 255, 0.8);
+      --bg-card-border: rgba(1, 181, 194, 0.2);
+
+      --accent-gold: #b88a00;
+      --accent-gold-hover: #a07800;
+      --accent-teal: #018a93;
+      --accent-teal-bright: #01b5c2;
+
+      --text-primary: #1a2024;
+      --text-muted: #5a6b6d;
+      --text-dim: #9aacae;
+
+      --border-subtle: #dce4e5;
+      --border-accent: #b88a00;
+
+      --danger: #b83232;
+      --danger-bg: rgba(184, 50, 50, 0.06);
+      --success: #1a8a3e;
+      --success-bg: rgba(26, 138, 62, 0.06);
+      --info: #1a6fd0;
+      --info-bg: rgba(26, 111, 208, 0.06);
+      --warning: #9a7500;
+      --warning-bg: rgba(154, 117, 0, 0.06);
+
+      --shadow-glow: 0 1px 3px rgba(0, 0, 0, 0.08);
+      --shadow-glow-hover: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    /* =========================================================
+       LIGHT MODE COMPONENT OVERRIDES
+       ========================================================= */
+    [data-theme="light"] .code-inline {
+      background: #ffd84d;
+      color: #1a2024;
+    }
+    [data-theme="light"] .demo-blockquote {
+      color: #7a5c00;
+      background: rgba(184, 138, 0, 0.06);
+    }
+    [data-theme="light"] .gradient-text {
+      background-image: linear-gradient(to right, #b88a00, #018a93);
+    }
+    [data-theme="light"] .demo-navbar {
+      background: rgba(255, 255, 255, 0.92);
+    }
+    [data-theme="light"] .code-block {
+      background: #f0f3f3;
+      border-color: var(--border-subtle);
+    }
+    [data-theme="light"] .code-block .keyword { color: #8a6500; }
+    [data-theme="light"] .code-block .string { color: #1a7a3a; }
+    [data-theme="light"] .code-block .comment { color: var(--text-dim); }
+    [data-theme="light"] .code-block .function { color: #018a93; }
+    [data-theme="light"] .code-block .number { color: #7c3aed; }
+    [data-theme="light"] .swatch-label { background: var(--bg-surface); }
+    [data-theme="light"] .admonition-tip .admonition-header { color: #1a8a3e; }
+    [data-theme="light"] .admonition-warning .admonition-header { color: #9a7500; }
+    [data-theme="light"] .admonition-info .admonition-header { color: #1a6fd0; }
+    [data-theme="light"] .admonition-danger .admonition-header { color: #b83232; }
+
+    /* =========================================================
+       THEME TOGGLE (floating)
+       ========================================================= */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      right: 24px;
+      z-index: 1000;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      padding: 8px 16px;
+      color: var(--text-muted);
+      font-family: var(--font-sans);
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .theme-toggle:hover {
+      border-color: var(--accent-teal);
+      color: var(--text-primary);
+    }
+    .theme-toggle-icon { font-size: 1rem; }
+
+    /* =========================================================
+       RESET & BASE
+       ========================================================= */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg-base);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 1.1rem;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--accent-gold); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent-teal); }
+
+    /* =========================================================
+       LAYOUT HELPERS
+       ========================================================= */
+    .guide-container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .guide-section { padding: 64px 0; border-bottom: 1px solid var(--border-subtle); }
+    .guide-section:last-child { border-bottom: none; }
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 8px;
+    }
+    .section-heading {
+      font-family: var(--font-sans);
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 32px;
+    }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; }
+    .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+    .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+    @media (max-width: 768px) {
+      .grid-2, .grid-3, .grid-4, .grid-5 { grid-template-columns: 1fr; }
+    }
+
+    /* =========================================================
+       1. COLOR PALETTE
+       ========================================================= */
+    .swatch {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 1px solid var(--border-subtle);
+    }
+    .swatch-color {
+      height: 80px;
+      display: flex;
+      align-items: flex-end;
+      padding: 8px 12px;
+    }
+    .swatch-label {
+      padding: 10px 12px;
+      background: var(--bg-surface);
+    }
+    .swatch-name {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .swatch-hex {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* =========================================================
+       2. TYPOGRAPHY
+       ========================================================= */
+    .type-demo { margin-bottom: 24px; }
+    .type-demo .label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      margin-bottom: 4px;
+    }
+    .type-h1 { font-size: 2.5rem; font-weight: 700; color: var(--text-primary); line-height: 1.2; }
+    .type-h2 { font-size: 2rem; font-weight: 600; color: var(--text-primary); line-height: 1.3; }
+    .type-h3 { font-size: 1.5rem; font-weight: 600; color: var(--text-primary); line-height: 1.4; }
+    .type-h4 { font-size: 1.25rem; font-weight: 600; color: var(--text-primary); line-height: 1.4; }
+    .type-h5 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); line-height: 1.5; }
+    .type-h6 { font-size: 1rem; font-weight: 600; color: var(--text-muted); line-height: 1.5; }
+    .type-body { font-size: 1.1rem; color: var(--text-primary); line-height: 1.7; }
+    .type-muted { font-size: 1rem; color: var(--text-muted); line-height: 1.6; }
+    .type-link { color: var(--accent-gold); }
+    .type-link:hover { color: var(--accent-teal); }
+
+    .gradient-text {
+      background-image: linear-gradient(to right, #ffb800, #0ae0f0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* =========================================================
+       3. NAVBAR
+       ========================================================= */
+    .demo-navbar {
+      position: relative;
+      background: rgba(1, 18, 20, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-accent);
+      padding: 0 24px;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .demo-navbar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 64px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .demo-navbar-logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    .demo-navbar-logo .gold { color: var(--accent-gold); }
+    .demo-navbar-logo .white { color: var(--text-primary); }
+    .demo-navbar-links { display: flex; gap: 32px; align-items: center; }
+    .demo-navbar-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      padding: 20px 0;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .demo-navbar-links a:hover {
+      color: var(--text-primary);
+      border-bottom-color: var(--accent-teal);
+    }
+    .demo-navbar-links a.active {
+      color: var(--accent-gold);
+      border-bottom-color: var(--accent-gold);
+    }
+    .demo-navbar-right { display: flex; align-items: center; gap: 16px; }
+    .demo-search-input {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 999px;
+      padding: 8px 16px;
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      font-size: 0.85rem;
+      outline: none;
+      width: 200px;
+      transition: border-color 0.2s;
+    }
+    .demo-search-input::placeholder { color: var(--text-dim); }
+    .demo-search-input:focus { border-color: var(--accent-teal); }
+    .demo-toggle {
+      width: 36px;
+      height: 20px;
+      background: var(--border-subtle);
+      border-radius: 999px;
+      position: relative;
+      cursor: pointer;
+    }
+    .demo-toggle::after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 14px;
+      height: 14px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      transition: transform 0.2s;
+    }
+
+    /* =========================================================
+       4. SIDEBAR
+       ========================================================= */
+    .demo-sidebar {
+      background: var(--bg-surface);
+      border-right: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px 0;
+      width: 280px;
+    }
+    .demo-sidebar-category {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-primary);
+      padding: 12px 24px 8px;
+    }
+    .demo-sidebar-link {
+      display: block;
+      padding: 8px 24px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      border-right: 2px solid transparent;
+      transition: all 0.15s;
+    }
+    .demo-sidebar-link:hover {
+      color: var(--text-primary);
+      background: var(--bg-card);
+    }
+    .demo-sidebar-link.active {
+      color: var(--accent-gold);
+      border-right-color: var(--accent-gold);
+      background: rgba(255, 184, 0, 0.04);
+    }
+    .demo-sidebar-chevron {
+      display: inline-block;
+      font-size: 0.65rem;
+      color: var(--text-dim);
+      margin-right: 6px;
+      transition: transform 0.2s;
+    }
+    .demo-sidebar-chevron.open { transform: rotate(90deg); }
+
+    /* =========================================================
+       5. GLASS CARDS
+       ========================================================= */
+    .glass-card {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--bg-card-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .glass-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow-hover);
+    }
+    .glass-card-gold { border-top: 4px solid var(--accent-gold); }
+    .glass-card-teal { border-top: 4px solid var(--accent-teal); }
+    .glass-card-info { border-top: 4px solid var(--info); }
+
+    .feature-card { text-align: center; }
+    .feature-card img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+    }
+    .feature-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+    .feature-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* =========================================================
+       6. CODE
+       ========================================================= */
+    .code-inline {
+      font-family: var(--font-mono);
+      font-weight: 600;
+      font-size: 0.85em;
+      background: #f8bb00;
+      color: #000;
+      padding: 3px 10px;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      align-items: center;
+    }
+    .code-block {
+      background: var(--bg-base);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--accent-teal);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-primary);
+      overflow-x: auto;
+    }
+    .code-block .keyword { color: var(--accent-gold); }
+    .code-block .string { color: #4ade80; }
+    .code-block .comment { color: var(--text-dim); }
+    .code-block .function { color: var(--accent-teal-bright); }
+    .code-block .number { color: #c084fc; }
+
+    /* =========================================================
+       7. ADMONITIONS
+       ========================================================= */
+    .admonition {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--bg-card-border);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-bottom: 16px;
+    }
+    .admonition-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 8px;
+    }
+    .admonition-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .admonition-body { font-size: 0.95rem; color: var(--text-primary); }
+
+    .admonition-tip {
+      border-left: 4px solid var(--success);
+      background: var(--success-bg);
+    }
+    .admonition-tip .admonition-header { color: #22c55e; }
+    .admonition-tip .admonition-icon { background: var(--success); }
+
+    .admonition-warning {
+      border-left: 4px solid var(--warning);
+      background: var(--warning-bg);
+    }
+    .admonition-warning .admonition-header { color: #eab308; }
+    .admonition-warning .admonition-icon { background: var(--warning); }
+
+    .admonition-info {
+      border-left: 4px solid var(--info);
+      background: var(--info-bg);
+    }
+    .admonition-info .admonition-header { color: #3b82f6; }
+    .admonition-info .admonition-icon { background: var(--info); }
+
+    .admonition-danger {
+      border-left: 4px solid var(--danger);
+      background: var(--danger-bg);
+    }
+    .admonition-danger .admonition-header { color: #ef4444; }
+    .admonition-danger .admonition-icon { background: var(--danger); }
+
+    /* =========================================================
+       8. BUTTONS
+       ========================================================= */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 24px;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      font-weight: 500;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn-primary {
+      background: var(--accent-gold);
+      color: #000;
+      border-color: var(--accent-gold);
+    }
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--accent-gold);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--text-primary);
+      border-color: var(--border-subtle);
+    }
+    .btn-secondary:hover {
+      border-color: var(--accent-teal);
+      color: var(--accent-teal);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-muted);
+      border-color: transparent;
+    }
+    .btn-ghost:hover {
+      color: var(--accent-gold);
+    }
+
+    /* =========================================================
+       9. TABLE OF CONTENTS
+       ========================================================= */
+    .demo-toc {
+      border-left: 2px solid var(--border-accent);
+      padding-left: 16px;
+      width: 240px;
+    }
+    .demo-toc-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+    }
+    .demo-toc-link {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding: 4px 0;
+      transition: color 0.15s;
+    }
+    .demo-toc-link:hover { color: var(--text-primary); }
+    .demo-toc-link.active { color: var(--accent-gold); font-weight: 600; }
+    .demo-toc-link.indent { padding-left: 16px; font-size: 0.8rem; }
+
+    /* =========================================================
+       10. PAGINATION
+       ========================================================= */
+    .demo-pagination {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .demo-pagination-link {
+      background: var(--bg-card);
+      backdrop-filter: blur(12px);
+      border: 1px solid var(--border-accent);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      cursor: pointer;
+    }
+    .demo-pagination-link:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-glow-hover);
+      border-color: var(--accent-teal);
+    }
+    .demo-pagination-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .demo-pagination-title {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+    .demo-pagination-link.next { text-align: right; }
+    .demo-pagination-link.next .demo-pagination-arrow { text-align: right; }
+
+    /* =========================================================
+       11. FOOTER
+       ========================================================= */
+    .demo-footer {
+      background: var(--bg-base);
+      border-top: 4px solid var(--border-accent);
+      border-radius: var(--radius-lg);
+      padding: 48px 32px 32px;
+    }
+    .demo-footer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-bottom: 32px;
+    }
+    .demo-footer-col h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+    .demo-footer-col a {
+      display: block;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding: 4px 0;
+      transition: color 0.15s;
+    }
+    .demo-footer-col a:hover { color: var(--accent-teal); }
+    .demo-footer-copyright {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-dim);
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    /* =========================================================
+       12. BLOCKQUOTE
+       ========================================================= */
+    .demo-blockquote {
+      border-left: 4px solid var(--accent-gold);
+      padding: 12px 20px;
+      color: #ffe085;
+      font-style: italic;
+      background: rgba(255, 184, 0, 0.04);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+
+    /* =========================================================
+       13. DOC PAGE LAYOUT
+       ========================================================= */
+    .demo-doc-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr 240px;
+      gap: 0;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      min-height: 500px;
+    }
+    .demo-doc-sidebar {
+      background: var(--bg-surface);
+      border-right: 1px solid var(--border-subtle);
+      padding: 24px 0;
+    }
+    .demo-doc-content {
+      padding: 40px;
+    }
+    .demo-doc-toc {
+      border-left: 1px solid var(--border-subtle);
+      padding: 24px 16px;
+    }
+    @media (max-width: 900px) {
+      .demo-doc-layout { grid-template-columns: 1fr; }
+      .demo-doc-sidebar, .demo-doc-toc { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="theme-toggle" onclick="toggleTheme()">
+    <span class="theme-toggle-icon" id="theme-icon">&#9790;</span>
+    <span id="theme-label">Dark</span>
+  </button>
+
+  <!-- =====================================================
+       GUIDE HEADER
+       ===================================================== -->
+  <div style="background: var(--bg-surface); border-bottom: 1px solid var(--border-subtle); padding: 40px 24px; margin-bottom: 0;">
+    <div class="guide-container" style="text-align: center;">
+      <div style="font-size: 0.75rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-teal); margin-bottom: 8px;">Visual Design Guide</div>
+      <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 8px;">
+        <span style="color: var(--accent-gold);">REDTEAM</span><span style="color: var(--text-primary);">.GUIDE</span>
+      </h1>
+      <p style="color: var(--text-muted); font-size: 1rem;">Component library &amp; design reference for the Docusaurus 3.9 theme</p>
+    </div>
+  </div>
+
+  <div class="guide-container">
+
+    <!-- =====================================================
+         SECTION 1: COLOR PALETTE
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">01 / Tokens</div>
+      <div class="section-heading">Color Palette</div>
+
+      <p style="color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem;">Core backgrounds</p>
+      <div class="grid-4" style="margin-bottom: 32px;">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #011214;"></div>
+          <div class="swatch-label"><div class="swatch-name">bg-base</div><div class="swatch-hex">#011214</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #06191c;"></div>
+          <div class="swatch-label"><div class="swatch-name">bg-surface</div><div class="swatch-hex">#06191c</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: rgba(6,25,28,0.7); backdrop-filter: blur(12px); border: 1px solid rgba(1,181,194,0.15);"></div>
+          <div class="swatch-label"><div class="swatch-name">bg-card (glass)</div><div class="swatch-hex">rgba(6,25,28,0.7)</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #1a2e31;"></div>
+          <div class="swatch-label"><div class="swatch-name">border-subtle</div><div class="swatch-hex">#1a2e31</div></div>
+        </div>
+      </div>
+
+      <p style="color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem;">Accent colors</p>
+      <div class="grid-4" style="margin-bottom: 32px;">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #ffb800;"></div>
+          <div class="swatch-label"><div class="swatch-name">accent-gold</div><div class="swatch-hex">#ffb800</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #f8bb00;"></div>
+          <div class="swatch-label"><div class="swatch-name">accent-gold-hover</div><div class="swatch-hex">#f8bb00</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #01b5c2;"></div>
+          <div class="swatch-label"><div class="swatch-name">accent-teal</div><div class="swatch-hex">#01b5c2</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #0ae0f0;"></div>
+          <div class="swatch-label"><div class="swatch-name">accent-teal-bright</div><div class="swatch-hex">#0ae0f0</div></div>
+        </div>
+      </div>
+
+      <p style="color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem;">Text</p>
+      <div class="grid-4" style="margin-bottom: 32px;">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #e5e7eb;"></div>
+          <div class="swatch-label"><div class="swatch-name">text-primary</div><div class="swatch-hex">#e5e7eb</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #89a8aa;"></div>
+          <div class="swatch-label"><div class="swatch-name">text-muted</div><div class="swatch-hex">#89a8aa</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #344647;"></div>
+          <div class="swatch-label"><div class="swatch-name">text-dim</div><div class="swatch-hex">#344647</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #ffb800;"></div>
+          <div class="swatch-label"><div class="swatch-name">border-accent</div><div class="swatch-hex">#ffb800</div></div>
+        </div>
+      </div>
+
+      <p style="color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem;">Semantic / admonitions</p>
+      <div class="grid-4">
+        <div class="swatch">
+          <div class="swatch-color" style="background: #006d24;"></div>
+          <div class="swatch-label"><div class="swatch-name">success</div><div class="swatch-hex">#006d24</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #c59700;"></div>
+          <div class="swatch-label"><div class="swatch-name">warning</div><div class="swatch-hex">#c59700</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #005aad;"></div>
+          <div class="swatch-label"><div class="swatch-name">info</div><div class="swatch-hex">#005aad</div></div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #6d2121;"></div>
+          <div class="swatch-label"><div class="swatch-name">danger</div><div class="swatch-hex">#6d2121</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 2: TYPOGRAPHY
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">02 / Typography</div>
+      <div class="section-heading">Type Scale &amp; Fonts</div>
+
+      <div class="grid-2">
+        <div>
+          <div class="type-demo">
+            <div class="label">h1 — Inter 700, 2.5rem</div>
+            <div class="type-h1">Red Team Operations</div>
+          </div>
+          <div class="type-demo">
+            <div class="label">h2 — Inter 600, 2rem</div>
+            <div class="type-h2">Planning an Engagement</div>
+          </div>
+          <div class="type-demo">
+            <div class="label">h3 — Inter 600, 1.5rem</div>
+            <div class="type-h3">Threat Profile Development</div>
+          </div>
+          <div class="type-demo">
+            <div class="label">h4 — Inter 600, 1.25rem</div>
+            <div class="type-h4">Rules of Engagement</div>
+          </div>
+          <div class="type-demo">
+            <div class="label">h5 — Inter 600, 1.1rem</div>
+            <div class="type-h5">Operational Security</div>
+          </div>
+          <div class="type-demo">
+            <div class="label">h6 — Inter 600, 1rem</div>
+            <div class="type-h6">Communication Plan</div>
+          </div>
+        </div>
+        <div>
+          <div class="type-demo">
+            <div class="label">body — Inter 400, 1.1rem</div>
+            <div class="type-body">Red teaming is the process of using tactics, techniques, and procedures to emulate a real-world threat, with the goal of measuring the effectiveness of people, processes, and technology used to defend an environment.</div>
+          </div>
+          <div class="type-demo">
+            <div class="label">muted text — Inter 400, 1rem</div>
+            <div class="type-muted">Secondary description or caption text for less prominent information.</div>
+          </div>
+          <div class="type-demo">
+            <div class="label">link</div>
+            <a href="#" class="type-link">View the engagement template &rarr;</a>
+          </div>
+          <div class="type-demo">
+            <div class="label">gradient text — hero headlines</div>
+            <div class="type-h1 gradient-text">Adversary Disruption</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 3: NAVBAR
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">03 / Navigation</div>
+      <div class="section-heading">Navbar</div>
+
+      <div class="demo-navbar">
+        <div class="demo-navbar-inner">
+          <div class="demo-navbar-logo"><span class="gold">REDTEAM</span><span class="white">.GUIDE</span></div>
+          <div class="demo-navbar-links">
+            <a href="#" class="active">Guides</a>
+            <a href="#">About the Book</a>
+            <a href="#">Authors</a>
+            <a href="#">Definitions</a>
+          </div>
+          <div class="demo-navbar-right">
+            <input type="text" class="demo-search-input" placeholder="Search docs...">
+            <div class="demo-toggle"></div>
+          </div>
+        </div>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 16px;">Sticky, backdrop-blur, gold bottom border. Active link gets gold text + gold underline. Hover shifts to teal underline.</p>
+    </div>
+
+    <!-- =====================================================
+         SECTION 4: SIDEBAR + TOC
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">04 / Navigation</div>
+      <div class="section-heading">Sidebar &amp; Table of Contents</div>
+
+      <div style="display: flex; gap: 48px; flex-wrap: wrap;">
+        <div>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px;">Doc sidebar</p>
+          <div class="demo-sidebar">
+            <div class="demo-sidebar-category"><span class="demo-sidebar-chevron open">&#9654;</span> Concepts</div>
+            <a href="#" class="demo-sidebar-link active">Red Teaming Overview</a>
+            <a href="#" class="demo-sidebar-link">MITRE ATT&amp;CK</a>
+            <a href="#" class="demo-sidebar-link">Threat Intelligence</a>
+            <a href="#" class="demo-sidebar-link">Adversary Emulation</a>
+            <div class="demo-sidebar-category"><span class="demo-sidebar-chevron">&#9654;</span> Planning</div>
+            <a href="#" class="demo-sidebar-link">Goal Planning</a>
+            <a href="#" class="demo-sidebar-link">Tradecraft</a>
+            <div class="demo-sidebar-category"><span class="demo-sidebar-chevron">&#9654;</span> Templates</div>
+            <a href="#" class="demo-sidebar-link">Report Template</a>
+            <a href="#" class="demo-sidebar-link">ROE Template</a>
+            <a href="#" class="demo-sidebar-link">Operations Log</a>
+          </div>
+        </div>
+        <div>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px;">Table of contents (right rail)</p>
+          <div class="demo-toc">
+            <div class="demo-toc-title">On this page</div>
+            <a href="#" class="demo-toc-link active">Overview</a>
+            <a href="#" class="demo-toc-link">Key Principles</a>
+            <a href="#" class="demo-toc-link indent">Threat Intelligence</a>
+            <a href="#" class="demo-toc-link indent">Adversary Emulation</a>
+            <a href="#" class="demo-toc-link">Planning Process</a>
+            <a href="#" class="demo-toc-link">Engagement Lifecycle</a>
+            <a href="#" class="demo-toc-link indent">Scoping</a>
+            <a href="#" class="demo-toc-link indent">Execution</a>
+            <a href="#" class="demo-toc-link indent">Reporting</a>
+            <a href="#" class="demo-toc-link">References</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 5: GLASS CARDS
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">05 / Surfaces</div>
+      <div class="section-heading">Glass Cards</div>
+
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 24px;">Hover any card to see the lift + glow effect</p>
+
+      <div class="grid-3" style="margin-bottom: 32px;">
+        <div class="glass-card glass-card-gold">
+          <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px;">Gold border top</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Used for primary or featured content blocks. Gold accent ties to the primary brand color.</p>
+        </div>
+        <div class="glass-card glass-card-teal">
+          <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px;">Teal border top</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Used for secondary content or interactive elements. Teal provides visual variety.</p>
+        </div>
+        <div class="glass-card glass-card-info">
+          <h3 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 8px;">Info border top</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Can be used with any semantic color for categorized card grids.</p>
+        </div>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 24px;">Homepage feature cards (book covers)</p>
+      <div class="grid-3">
+        <div class="glass-card feature-card">
+          <div style="width: 140px; height: 180px; background: var(--bg-surface); border-radius: var(--radius-md); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: var(--text-dim); font-size: 0.8rem;">Book Cover</div>
+          <h3>Get a Paperback Copy</h3>
+          <p>Purchase a paperback copy from Amazon</p>
+        </div>
+        <div class="glass-card feature-card">
+          <div style="width: 140px; height: 180px; background: var(--bg-surface); border-radius: var(--radius-md); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: var(--text-dim); font-size: 0.8rem;">Kindle Cover</div>
+          <h3>Get a Copy on Kindle</h3>
+          <p>Purchase a Kindle copy from Amazon</p>
+        </div>
+        <div class="glass-card feature-card">
+          <div style="width: 140px; height: 180px; background: var(--bg-surface); border-radius: var(--radius-md); margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; color: var(--text-dim); font-size: 0.8rem;">Review</div>
+          <h3>Leave a Review</h3>
+          <p>Already have a copy? Consider leaving a review.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 6: CODE
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">06 / Code</div>
+      <div class="section-heading">Code Blocks &amp; Inline Code</div>
+
+      <div class="grid-2">
+        <div>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px;">Inline code badges</p>
+          <p style="line-height: 2.2;">
+            Run <span class="code-inline">mimikatz</span> to extract credentials, then use
+            <span class="code-inline">PsExec</span> for lateral movement. Check the
+            <span class="code-inline">C2</span> callback interval before proceeding.
+          </p>
+        </div>
+        <div>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 16px;">Code block with syntax highlighting</p>
+          <div class="code-block"><span class="comment"># Establish C2 channel</span>
+<span class="keyword">import</span> <span class="function">socket</span>
+
+<span class="keyword">def</span> <span class="function">connect</span>(host, port):
+    s = socket.<span class="function">socket</span>(socket.AF_INET)
+    s.<span class="function">connect</span>((host, port))
+    <span class="keyword">return</span> s
+
+target = <span class="string">"192.168.1.100"</span>
+port = <span class="number">443</span>
+session = <span class="function">connect</span>(target, port)</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 7: ADMONITIONS
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">07 / Feedback</div>
+      <div class="section-heading">Admonitions</div>
+
+      <div style="max-width: 700px;">
+        <div class="admonition admonition-tip">
+          <div class="admonition-header"><div class="admonition-icon">&#10003;</div> Tip</div>
+          <div class="admonition-body">Always verify your C2 channel is operational before beginning lateral movement. Use out-of-band confirmation when possible.</div>
+        </div>
+        <div class="admonition admonition-info">
+          <div class="admonition-header"><div class="admonition-icon">i</div> Info</div>
+          <div class="admonition-body">MITRE ATT&amp;CK provides a comprehensive matrix of adversary tactics and techniques based on real-world observations.</div>
+        </div>
+        <div class="admonition admonition-warning">
+          <div class="admonition-header"><div class="admonition-icon">!</div> Warning</div>
+          <div class="admonition-body">Ensure all activities remain within the agreed-upon Rules of Engagement. Unauthorized actions can have legal consequences.</div>
+        </div>
+        <div class="admonition admonition-danger">
+          <div class="admonition-header"><div class="admonition-icon">&#10005;</div> Danger</div>
+          <div class="admonition-body">Never execute destructive actions without explicit written authorization from the engagement sponsor.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 8: BUTTONS
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">08 / Actions</div>
+      <div class="section-heading">Buttons</div>
+
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+        <button class="btn btn-primary">Primary Action</button>
+        <button class="btn btn-secondary">Secondary Action</button>
+        <button class="btn btn-ghost">Ghost Link &rarr;</button>
+      </div>
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 16px;">Primary inverts on hover (gold outline, transparent fill). Secondary gains teal border. Ghost shifts to gold text.</p>
+    </div>
+
+    <!-- =====================================================
+         SECTION 9: BLOCKQUOTE
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">09 / Content</div>
+      <div class="section-heading">Blockquotes</div>
+
+      <div style="max-width: 700px;">
+        <div class="demo-blockquote">
+          "The threat gets a vote. If you are building a defense plan without considering how real adversaries operate, you are leaving critical security decisions to the attacker."
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 10: PAGINATION
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">10 / Navigation</div>
+      <div class="section-heading">Pagination</div>
+
+      <div class="demo-pagination" style="max-width: 700px;">
+        <div class="demo-pagination-link">
+          <div class="demo-pagination-label">&larr; Previous</div>
+          <div class="demo-pagination-title">Threat Intelligence</div>
+        </div>
+        <div class="demo-pagination-link next">
+          <div class="demo-pagination-label">Next &rarr;</div>
+          <div class="demo-pagination-title">Adversary Emulation</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 11: FOOTER
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">11 / Layout</div>
+      <div class="section-heading">Footer</div>
+
+      <div class="demo-footer">
+        <div class="demo-footer-grid">
+          <div class="demo-footer-col">
+            <h4>Docs</h4>
+            <a href="#">Red Team Guides</a>
+            <a href="#">About the Book</a>
+            <a href="#">About the Authors</a>
+            <a href="#">Definitions</a>
+          </div>
+          <div class="demo-footer-col">
+            <h4>Community</h4>
+            <a href="#">Twitter — Joe Vest</a>
+            <a href="#">Twitter — James Tubberville</a>
+          </div>
+          <div class="demo-footer-col">
+            <h4>More</h4>
+            <a href="#">Blog</a>
+            <a href="#">GitHub</a>
+          </div>
+        </div>
+        <div class="demo-footer-copyright">Copyright &copy; 2026 RedTeam.Guide</div>
+      </div>
+    </div>
+
+    <!-- =====================================================
+         SECTION 12: FULL DOC PAGE LAYOUT
+         ===================================================== -->
+    <div class="guide-section">
+      <div class="section-title">12 / Composition</div>
+      <div class="section-heading">Full Doc Page Layout</div>
+
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 24px;">Three-column layout: sidebar + content + table of contents</p>
+
+      <div class="demo-doc-layout">
+        <div class="demo-doc-sidebar">
+          <div class="demo-sidebar-category"><span class="demo-sidebar-chevron open">&#9654;</span> Concepts</div>
+          <a href="#" class="demo-sidebar-link">Red Teaming Overview</a>
+          <a href="#" class="demo-sidebar-link active">MITRE ATT&amp;CK</a>
+          <a href="#" class="demo-sidebar-link">Threat Intelligence</a>
+          <div class="demo-sidebar-category"><span class="demo-sidebar-chevron">&#9654;</span> Planning</div>
+          <a href="#" class="demo-sidebar-link">Goal Planning</a>
+          <a href="#" class="demo-sidebar-link">Tradecraft</a>
+        </div>
+        <div class="demo-doc-content">
+          <h1 style="font-size: 2rem; font-weight: 700; margin-bottom: 8px;">MITRE ATT&amp;CK Framework</h1>
+          <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 32px;">Understanding adversary behavior through a structured knowledge base</p>
+
+          <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 12px;">Overview</h2>
+          <p style="margin-bottom: 24px;">MITRE ATT&amp;CK is a globally-accessible knowledge base of adversary tactics and techniques based on real-world observations. The ATT&amp;CK knowledge base is used as a foundation for the development of specific threat models and methodologies.</p>
+
+          <div class="admonition admonition-tip" style="margin-bottom: 24px;">
+            <div class="admonition-header"><div class="admonition-icon">&#10003;</div> Tip</div>
+            <div class="admonition-body">Map your red team activities to ATT&amp;CK techniques to provide actionable intelligence to the blue team.</div>
+          </div>
+
+          <h2 style="font-size: 1.5rem; font-weight: 600; margin-bottom: 12px;">Key Principles</h2>
+          <p style="margin-bottom: 16px;">The framework organizes adversary behavior into a series of <span class="code-inline">tactics</span> representing the adversary's technical goals, and <span class="code-inline">techniques</span> describing how those goals are achieved.</p>
+
+          <div class="code-block" style="margin-bottom: 24px;"><span class="comment"># Example: mapping engagement to ATT&amp;CK</span>
+tactic: <span class="string">"Initial Access"</span>
+technique: <span class="string">"T1566 - Phishing"</span>
+sub_technique: <span class="string">"T1566.001 - Spearphishing Attachment"</span></div>
+
+          <div class="demo-blockquote" style="margin-bottom: 32px;">"ATT&amp;CK provides a common language for describing adversary behavior that both red and blue teams can use."</div>
+
+          <div class="demo-pagination">
+            <div class="demo-pagination-link">
+              <div class="demo-pagination-label">&larr; Previous</div>
+              <div class="demo-pagination-title">Red Teaming Overview</div>
+            </div>
+            <div class="demo-pagination-link next">
+              <div class="demo-pagination-label">Next &rarr;</div>
+              <div class="demo-pagination-title">Threat Intelligence</div>
+            </div>
+          </div>
+        </div>
+        <div class="demo-doc-toc">
+          <div class="demo-toc">
+            <div class="demo-toc-title">On this page</div>
+            <a href="#" class="demo-toc-link active">Overview</a>
+            <a href="#" class="demo-toc-link">Key Principles</a>
+            <a href="#" class="demo-toc-link indent">Tactics</a>
+            <a href="#" class="demo-toc-link indent">Techniques</a>
+            <a href="#" class="demo-toc-link">Usage in Red Teams</a>
+            <a href="#" class="demo-toc-link">References</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- =====================================================
+       GUIDE FOOTER
+       ===================================================== -->
+  <div style="text-align: center; padding: 48px 24px; color: var(--text-dim); font-size: 0.85rem; border-top: 1px solid var(--border-subtle);">
+    REDTEAM.GUIDE Visual Design Guide — March 2026
+  </div>
+
+  <script>
+    function toggleTheme() {
+      var html = document.documentElement;
+      var isLight = html.getAttribute('data-theme') === 'light';
+      html.setAttribute('data-theme', isLight ? 'dark' : 'light');
+      var icon = document.getElementById('theme-icon');
+      var label = document.getElementById('theme-label');
+      icon.textContent = isLight ? '\u263E' : '\u2604';
+      label.textContent = isLight ? 'Dark' : 'Light';
+    }
+  </script>
+
+</body>
+</html>

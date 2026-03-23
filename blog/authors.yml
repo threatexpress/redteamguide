@@ -1,0 +1,17 @@
+joe:
+  name: Joe Vest
+  title: Red Team Operator & Author
+  url: https://www.linkedin.com/in/joe-vest
+  image_url: /img/joe-vest.png
+
+james:
+  name: James Tubberville
+  title: Red Team Operator & Author
+  url: https://twitter.com/minis_io
+  image_url: /img/logo.png
+
+andrewchiles:
+  name: Andrew Chiles
+  title: Red Team Operator
+  url: https://twitter.com/AndrewChiles
+  image_url: /img/logo.png

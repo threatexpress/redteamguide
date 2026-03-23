@@ -1,10 +1,11 @@
 ---
 id: roe-planning
 title: "Rules of Engagement (ROE) Planning"
+description: "Guide to planning and defining rules of engagement for red team operations"
 sidebar_position: 2
+keywords: [rules of engagement, ROE, red team planning, engagement scope, security testing rules]
 ---
 
-import Icon from "@material-ui/core/Icon";
 
 :::note Rules of Engagement
 The Rules of Engagement establish the responsibility, relationship, and guidelines between the Red Team, the network owner, the system owner, and any stakeholders required for engagement execution.

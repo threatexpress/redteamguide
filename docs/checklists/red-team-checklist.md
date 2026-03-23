@@ -1,10 +1,11 @@
 ---
 id: red-team-checklist
-title: "Red team checklist"
+title: "Red Team Checklist"
+description: "Comprehensive checklist for planning and executing red team engagements, from scoping to reporting"
 sidebar_position: 1
+keywords: [red team checklist, engagement planning, red team operations, security assessment checklist]
 ---
 
-import Icon from "@material-ui/core/Icon";
 
 :::note About the checklist
 This set of checklists is intended to be a start to help plan and build a red team. Each design may have additional requirements. Use this as a starting point and modify as you see fit.

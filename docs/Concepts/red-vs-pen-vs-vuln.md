@@ -1,7 +1,8 @@
 ---
 title: "Red Team Engagement vs Penetration Test vs Vulnerability Assessment"
-description: >
-  Red Team Engagement vs Penetration Test vs Vulnerability Assessment
+description: "Key differences between red team engagements, penetration tests, and vulnerability assessments for security testing"
+sidebar_position: 2
+keywords: [red team, penetration test, vulnerability assessment, comparison, security testing]
 ---
 
 :::tip

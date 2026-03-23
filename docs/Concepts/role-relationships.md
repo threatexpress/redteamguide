@@ -1,7 +1,8 @@
 ---
 title: "Roles and Relationships"
-description: >
-  The relationships of roles and responsibilities used in Red Teaming
+description: "Red team roles, responsibilities, and organizational relationships including red cell, white cell, and blue team"
+sidebar_position: 3
+keywords: [red team roles, red cell, white cell, blue team, red team organization, security team structure]
 ---
 
 :::tip

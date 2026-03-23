@@ -1,30 +1,29 @@
 ---
 id: references_templates_talks
 title: "References, Templates, and Presentations"
-description: References and Templates
+description: "Red team references, templates, and presentations for planning and executing engagements"
 sidebar_position: 1
+keywords: [red team references, red team templates, red team presentations, security resources]
 ---
-
-import Icon from "@material-ui/core/Icon";
 
 This is a collection of references, templates, and presentation used throughout this guide.
 
 ## References
 
-Download the book's <Icon>file_download</Icon> [Table of Contents](/files/red_team_development_and_operations_toc.pdf)
+Download the book's <span class="material-icons">file_download</span> [Table of Contents](/files/red_team_development_and_operations_toc.pdf)
 
 Link                                                                               | Name | Description
 -----------------------------------------------------------------------------------|------|------------
-[ <Icon>link</Icon> ](http://threatexpress.com/blogs/2018/threat-gets-a-vote-applying-a-threat-based-approach-to-security-testing/) | Threat Get's a Vote| Dig deeper in the need for the threat perspective here.
+[ <span class="material-icons">link</span> ](http://threatexpress.com/blogs/2018/threat-gets-a-vote-applying-a-threat-based-approach-to-security-testing/) | Threat Get's a Vote| Dig deeper in the need for the threat perspective here.
 
 ## Templates
 
 Link                                                                               | Name | Description
 -----------------------------------------------------------------------------------|------|------------
-[ <Icon>file_download</Icon> ](/templates/operator_log.xlsx)        | operator_log.xlxs        | Operator Log (xlsx) template
-[ <Icon>file_download</Icon> ](/templates/operator_log.csv)         | operator_log.csv         | Operator Log (csv) template
-[ <Icon>file_download</Icon> ](/templates/redteam_ROE_example.docx) | redteam_ROE_example.docx | Rule of Engagement template
-[ <Icon>file_download</Icon> ](/templates/redteam_report_example.docx) | redteam_report_example.docx | Red Team Report Template
+[ <span class="material-icons">file_download</span> ](/templates/operator_log.xlsx)        | operator_log.xlxs        | Operator Log (xlsx) template
+[ <span class="material-icons">file_download</span> ](/templates/operator_log.csv)         | operator_log.csv         | Operator Log (csv) template
+[ <span class="material-icons">file_download</span> ](/templates/redteam_ROE_example.docx) | redteam_ROE_example.docx | Rule of Engagement template
+[ <span class="material-icons">file_download</span> ](/templates/redteam_report_example.docx) | redteam_report_example.docx | Red Team Report Template
 
 ## Presentations from the Authors
 

@@ -1,12 +1,11 @@
 ---
 title: "Red Team Report Template"
-description: >
-  Report Template
+description: "Template for writing red team engagement reports including findings, attack paths, and recommendations"
+sidebar_position: 1
+keywords: [red team report, report template, engagement report, security assessment report, red team findings]
 ---
 
-import Icon from "@material-ui/core/Icon";
-
-:::info 
+:::info
 This is best viewed in light mode or the document template.
 
 This is a sample red team report. Use this as a starting point or reference to create or enhance your own custom template.
@@ -147,4 +146,4 @@ Overall, the Red Team was able to accomplish threat objectives and it is our hop
 
 ## Download Templates
 
-[<Icon>file_download</Icon>Red Team Report Template](/templates/redteam_report_example.docx)
+[<span class="material-icons">file_download</span> Red Team Report Template](/templates/redteam_report_example.docx)

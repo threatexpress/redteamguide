@@ -1,6 +1,10 @@
 {
   "label": "Exercises",
-  "position": 80
+  "position": 80,
+  "link": {
+    "type": "generated-index",
+    "description": "Hands-on challenges and threat profiling exercises"
+  }
 }
 
 

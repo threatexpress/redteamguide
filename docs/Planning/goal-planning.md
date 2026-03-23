@@ -1,7 +1,8 @@
 ---
 title: "Red Team Engagement Goal Planning"
-description: >
-  Red team goal planning guide
+description: "How to define goals and objectives for red team engagements aligned with organizational security testing needs"
+sidebar_position: 1
+keywords: [red team goals, engagement planning, red team objectives, security testing goals, adversary emulation planning]
 ---
 
 :::info

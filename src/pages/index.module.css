@@ -1,25 +1,365 @@
-/* stylelint-disable docusaurus/copyright-header */
+/* ==========================================================================
+   HOMEPAGE — Hero
+   ========================================================================== */
 
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+.hero {
   position: relative;
+  padding: 80px 24px 64px;
+  text-align: center;
+  background: var(--bg-base);
   overflow: hidden;
 }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+.heroWatermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  opacity: 0.04;
+  pointer-events: none;
+  user-select: none;
 }
 
-.buttons {
+html[data-theme='light'] .heroWatermark {
+  opacity: 0.03;
+}
+
+.heroContent {
+  position: relative;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+  color: var(--text-primary);
+}
+
+.heroDot {
+  color: var(--accent-gold);
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   HOMEPAGE — Search Bar
+   ========================================================================== */
+
+.searchBar {
   display: flex;
   align-items: center;
-  justify-content: center;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.searchBar:hover,
+.searchBar:focus {
+  border-color: var(--accent-teal);
+  box-shadow: 0 0 0 3px rgba(1, 181, 194, 0.08);
+  outline: none;
+}
+
+.searchIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--text-dim);
+  flex-shrink: 0;
+  margin-right: 12px;
+}
+
+.searchText {
+  flex: 1;
+  text-align: left;
+  font-size: 0.95rem;
+  color: var(--text-dim);
+}
+
+.searchShortcut {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  background: var(--bg-card);
+  padding: 2px 8px;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+}
+
+/* ==========================================================================
+   HOMEPAGE — Curated Highlights
+   ========================================================================== */
+
+.highlightsSection {
+  padding: 48px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.highlightsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.highlightCard {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+}
+
+.highlightCard:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.highlightTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.highlightDesc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.highlightArrow {
+  color: var(--accent-gold);
+  margin-top: 12px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.2s;
+}
+
+.highlightCard:hover .highlightArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ==========================================================================
+   HOMEPAGE — Blog Section
+   ========================================================================== */
+
+.blogSection {
+  padding: 48px 0;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.sectionLink {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.sectionLink:hover {
+  color: var(--accent-teal);
+  text-decoration: none;
+}
+
+.blogGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.blogCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.blogCard:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blogPostTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 4px;
+}
+
+.blogPostDesc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.blogPostArrow {
+  color: var(--accent-gold);
+  opacity: 0;
+  flex-shrink: 0;
+  margin-left: 16px;
+  transition: opacity 0.2s;
+}
+
+.blogCard:hover .blogPostArrow {
+  opacity: 1;
+}
+
+/* ==========================================================================
+   HOMEPAGE — Book Section
+   ========================================================================== */
+
+.bookSection {
+  padding: 48px 0 64px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.bookCard {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 32px;
+}
+
+.bookCard:hover {
+  transform: none;
+}
+
+.bookCover {
+  width: 120px;
+  flex-shrink: 0;
+  border-radius: 6px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme='light'] .bookCover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.bookContent {
+  flex: 1;
+}
+
+.bookTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.bookDesc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.bookActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bookLink {
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 6px 16px;
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+  color: var(--accent-gold);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.bookLink:hover {
+  background: var(--accent-gold);
+  color: #000;
+  text-decoration: none;
+}
+
+.bookSecondaryLinks {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.bookMore {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.bookMore:hover {
+  color: var(--accent-teal);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 48px 16px 40px;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .highlightsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .blogGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bookCard {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .bookActions {
+    justify-content: center;
+  }
 }

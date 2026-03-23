@@ -1,0 +1,10 @@
+{
+  "label": "Threat Profiles",
+  "position": 70,
+  "link": {
+    "type": "generated-index",
+    "description": "Example adversary profiles for realistic engagements"
+  }
+}
+
+

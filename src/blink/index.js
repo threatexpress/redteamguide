@@ -1,9 +1,7 @@
-// Original: https://github.com/sdras/night-owl-vscode-theme
-// Converted automatically using ./tools/themeFromVsCode
 var theme = {
   plain: {
-    color: "#ffffff",
-    backgroundColor: "#033b3f",
+    color: "#e5e7eb",
+    backgroundColor: "#011214",
   },
   styles: [
     {
@@ -23,21 +21,21 @@ var theme = {
     {
       types: ["inserted", "attr-name"],
       style: {
-        color: "rgb(173, 219, 103)",
+        color: "#4ade80",
         fontStyle: "italic",
       },
     },
     {
       types: ["comment"],
       style: {
-        color: "rgb(99, 119, 119)",
+        color: "#344647",
         fontStyle: "italic",
       },
     },
     {
       types: ["string", "url"],
       style: {
-        color: "#89a8aa",
+        color: "#4ade80",
       },
     },
     {
@@ -49,21 +47,19 @@ var theme = {
     {
       types: ["number"],
       style: {
-        color: "#ffb800",
+        color: "#c084fc",
       },
     },
     {
       types: ["builtin", "char", "constant", "function"],
       style: {
-        color: "#1877f2",
+        color: "#0ae0f0",
       },
     },
     {
-      // This was manually added after the auto-generation
-      // so that punctuations are not italicised
       types: ["punctuation"],
       style: {
-        color: "rgb(199, 146, 234)",
+        color: "#89a8aa",
       },
     },
     {
@@ -82,7 +78,7 @@ var theme = {
     {
       types: ["tag", "operator", "keyword"],
       style: {
-        color: "rgb(127, 219, 202)",
+        color: "#ffb800",
       },
     },
     {
@@ -94,7 +90,7 @@ var theme = {
     {
       types: ["property"],
       style: {
-        color: "rgb(128, 203, 196)",
+        color: "#01b5c2",
       },
     },
     {

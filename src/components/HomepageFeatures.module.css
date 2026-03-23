@@ -1,14 +1,66 @@
-/* stylelint-disable docusaurus/copyright-header */
+.categoriesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
 
-.features {
+.categoryCard {
   display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  flex-direction: column;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  border-left: 2px solid transparent;
+  transition: all 0.2s;
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.categoryCard:hover {
+  text-decoration: none;
+  color: inherit;
+  border-left-color: var(--accent-teal);
 }
 
+.categoryTag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent-teal);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.categoryTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.categoryDesc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+  flex: 1;
+  line-height: 1.5;
+}
+
+.categoryArrow {
+  font-size: 1.1rem;
+  color: var(--accent-gold);
+  margin-top: 12px;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition: all 0.2s;
+}
+
+.categoryCard:hover .categoryArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media screen and (max-width: 768px) {
+  .categoriesGrid {
+    grid-template-columns: 1fr;
+  }
+}

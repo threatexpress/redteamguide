@@ -1,9 +1,8 @@
 ---
 title: "Red Teaming and MITRE ATT&CK"
-date: 2020-01-21
-sidebar-position: 4
-description: >
-  An overview of Red Teaming the role played by MITRE ATT&CK.
+sidebar_position: 4
+description: "How MITRE ATT&CK framework supports red team operations, threat emulation, and adversary simulation"
+keywords: [MITRE ATT&CK, red team, adversary emulation, threat framework, TTPs, tactics techniques procedures]
 ---
 
 # MITRE ATT&CK

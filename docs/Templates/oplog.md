@@ -1,12 +1,9 @@
 ---
 title: "Operator Log"
-date: 2020-01-21
-position: 2
-description: >
-  Operator Log Template
+sidebar_position: 2
+description: "Red team operator log template for tracking actions, timestamps, and engagement activity"
+keywords: [operator log, OPLOG, red team logging, engagement tracking, red team template]
 ---
-import Icon from "@material-ui/core/Icon";
-
 ## Example Operator Log
 
 This operator log example shows the type of detail needed to describe an action taken by a red team operator.
@@ -17,8 +14,8 @@ This operator log example shows the type of detail needed to describe an action 
 
 ## Download Templates
 
-[<Icon>file_download</Icon> Operator Log (xlsx)](/templates/operator_log.xlsx)
+[<span class="material-icons">file_download</span> Operator Log (xlsx)](/templates/operator_log.xlsx)
 
 
-[<Icon>file_download</Icon> Operator Log (csv)](/templates/operator_log.csv)
+[<span class="material-icons">file_download</span> Operator Log (csv)](/templates/operator_log.csv)
 

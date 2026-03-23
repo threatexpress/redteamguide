@@ -1,7 +1,8 @@
 ---
 title: "Decomposing a Threat"
-description: >
-  Exercise: Decomposing a Threat in to a Threat Profile
+description: "Exercise: Decomposing a real-world threat into an actionable threat profile for red team emulation"
+sidebar_position: 2
+keywords: [threat profile, threat emulation, energetic bear, HAVEX, exercise, TTPs]
 ---
 
 ## Description
@@ -148,27 +149,31 @@ __References__
 
 __POST Request__
 
-    POST /wp08/wp-includes/dtcla.php?id=285745296322896178920098FD80-20&v1=038&v2=170393861&q=5265882854508EFCF958F979E4 HTTP/1.1
-    User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/525.19(KHTML, like Gecko) Chrome/1.0.154.36 Safari/525.19
-    Host: toons.freesexycomics.com
-    Content-Length: 0
-    Cache-Control: no-cache
+```
+POST /wp08/wp-includes/dtcla.php?id=285745296322896178920098FD80-20&v1=038&v2=170393861&q=5265882854508EFCF958F979E4 HTTP/1.1
+User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/525.19(KHTML, like Gecko) Chrome/1.0.154.36 Safari/525.19
+Host: toons.freesexycomics.com
+Content-Length: 0
+Cache-Control: no-cache
+```
 
 __POST Response__
 
-    HTTP/1.1 200 OK
-    Date: Wed, 22 Jan 2014 13:40:48 GMT
-    Content-Type: text/html
-    Transfer-Encoding: chunked
-    Connection: keep-alive
-    Server: Apache/1.3.37 (Unix)
-    Cache-Control: no-cache
+```
+HTTP/1.1 200 OK
+Date: Wed, 22 Jan 2014 13:40:48 GMT
+Content-Type: text/html
+Transfer-Encoding: chunked
+Connection: keep-alive
+Server: Apache/1.3.37 (Unix)
+Cache-Control: no-cache
 
-    9f65
-    <html><head><mega http-equiv=’CACHE-CONTROL’ content=’NO-CACHE’></head><body>No data!<!--havexQlpoOTFBWSZTWWYvDI0BOsD/////////////////////////////////////////////4oB+93VVXu69DuN7XYzds9yt49Ques
-    [...TRUNCATED ...]
-    +yUW3zfTxWAOstsCwCckdW5 AH5Q6vbbCu7GputPt5CSfgPCAKXcAOOICMsqliACGYEhAQT3v9eD
-    M92D/8XckU4UJBmLwyNA==havex--></body></head>
+9f65
+<html><head><mega http-equiv=’CACHE-CONTROL’ content=’NO-CACHE’></head><body>No data!<!--havexQlpoOTFBWSZTWWYvDI0BOsD/////////////////////////////////////////////4oB+93VVXu69DuN7XYzds9yt49Ques
+[...TRUNCATED ...]
++yUW3zfTxWAOstsCwCckdW5 AH5Q6vbbCu7GputPt5CSfgPCAKXcAOOICMsqliACGYEhAQT3v9eD
+M92D/8XckU4UJBmLwyNA==havex--></body></head>
+```
 
 In this example from Symantec, several indicators can be identified.
 
@@ -206,19 +211,9 @@ References
 
 -----------------------------------
 
-__!! Stop Here !!__
-
+:::warning Stop Here
 Do not continue until ready for a possible solution.
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+:::
 
 ## Possible Solution
 
@@ -237,12 +232,16 @@ Do not continue until ready for a possible solution.
 __HAVEX HTTP Indicators__
 
 Parameters:
-    
-    v1=038&v2=170393861&q=5265…
-    
+
+```
+v1=038&v2=170393861&q=5265…
+```
+
 Headers:
-    
-    <head><mega http-equiv='CACHE-CONTROL' content='NO CACHE'></head><body>No Data!<!--havexhavex--></body></head>
+
+```
+<head><mega http-equiv='CACHE-CONTROL' content='NO CACHE'></head><body>No Data!<!--havexhavex--></body></head>
+```
 
 ## Conclusion
 

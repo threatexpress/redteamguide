@@ -1,9 +1,9 @@
 ---
 title: "What is Red Teaming?"
-date: 2020-01-21
-weight: 4
+sidebar_position: 1
 description: >
   What is Red Teaming?
+keywords: [red team, red teaming, TTPs, blue team, security testing, threat emulation]
 ---
 
 :::tip
@@ -36,8 +36,20 @@ How often do security defenders ask the bad-guy how or what they will do? Many o
 
 > Better to learn and practice with a Red Team than a real buy guy... _anonymous blue teamer_
 
+## Red Team Engagement Lifecycle
+
+```mermaid
+flowchart LR
+    A[Planning] --> B[Reconnaissance]
+    B --> C["Get In"]
+    C --> D["Stay In"]
+    D --> E[Act]
+    E --> F[Reporting]
+    F --> G[Lessons Learned]
+```
+
 ## Red Teaming vs Penetration Testing vs Vulnerability Testing
 
 Follow this link for a comparison of security testing types.
 
-**[Red Team Engagement vs Penetration Test vs Vulnerability Assessment](/docs/concepts/red-vs-pen-vs-vuln/)**
+**[Red Team Engagement vs Penetration Test vs Vulnerability Assessment](/docs/Concepts/red-vs-pen-vs-vuln/)**

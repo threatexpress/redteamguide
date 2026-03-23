@@ -1,6 +1,10 @@
 {
   "label": "Planning",
-  "position": 60
+  "position": 60,
+  "link": {
+    "type": "generated-index",
+    "description": "Goal planning, tradecraft, and engagement scoping"
+  }
 }
 
 

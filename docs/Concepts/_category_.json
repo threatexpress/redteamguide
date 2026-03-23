@@ -1,6 +1,10 @@
 {
   "label": "Concepts",
-  "position": 4
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Red teaming fundamentals, MITRE ATT&CK, and adversary emulation"
+  }
 }
 
 

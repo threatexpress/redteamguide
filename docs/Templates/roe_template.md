@@ -1,12 +1,10 @@
 ---
 title: "ROE Template"
-date: 2020-01-21
-position: 3
-description: >
-  Rules of Engagement (ROE) Template
+sidebar_position: 3
+description: "Rules of engagement template for defining scope, boundaries, and authorization for red team operations"
+keywords: [ROE template, rules of engagement, red team scope, engagement authorization, security testing rules]
 ---
 
-import Icon from "@material-ui/core/Icon";
 
 :::tip
 This is a sample rules of engagement document. Use this as a starting point or reference to create or enhance your own custom template.
@@ -431,5 +429,5 @@ __Persistence__
 
 ## Download Templates
 
-[<Icon>file_download</Icon>Rules of Engagement Template (docx)](/templates/redteam_ROE_example.docx)
+[<span class="material-icons">file_download</span> Rules of Engagement Template (docx)](/templates/redteam_ROE_example.docx)
 

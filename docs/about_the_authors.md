@@ -1,19 +1,37 @@
 ---
 id: about_the_authors
 title: "About the Authors"
-description: About the Authors
+description: "Joe Vest and James Tubberville — authors of Red Team Development and Operations with 20+ years of offensive security experience"
 sidebar_position: 1
+keywords: [red team authors, Joe Vest, James Tubberville, offensive security, red team operations]
 ---
-
-import Icon from "@material-ui/core/Icon";
 
 ## Joe Vest
 
 Twitter: <a href="https://twitter.com/joevest">@joevest</a>
 
-LinkedIn: <a href="https://www.linkedin.com/in/joe-vest">in/joe-vest</a>
+LinkedIn: <a href="https://www.linkedin.com/in/joe-vest">joe-vest</a>
 
-Driven by his curiosity, perseverance, and passion for technology, Joe Vest's mantra for his work and teaching is: "The journey of gaining experience can be as valuable as the end result." Joe has 20 years of experience in red teaming, penetration testing, and application security. Joe is currently the Cobalt Strike Technical Director at HelpSystems. Prior experience ranges from authoring the book "Red Team Development and Operations," the original author of the SANS 564 red team course, red team lead on a DoD red team, owner of a security consulting company, and a former director at SpecterOps.  This diverse experience has given him extensive knowledge of cyber threats, tools, and tactics, including threat emulation and threat detection. 
+I have spent over 20 years in cybersecurity, with the last 15 years focused on offensive security operations . My philosophy is simple: "The threat gets a vote". If you build a defense without considering how an actual adversary operates, you are letting the threat make your security decisions for you.
+
+I am not interested in "findings-based" testing that just grows a backlog of vulnerabilities. I focus on the Threat Perspective—a strategic shift toward understanding adversary behavior to drive measurable disruption.
+
+What I’ve Done
+
+- Authorship: I wrote the foundational text _Red Team Development and Operations_ and developed the original SANS Red Team course (SEC564).
+- Foundership: I founded MINIS LLC, a specialized offensive security consultancy, and led it through its acquisition by SpecterOps.
+- Platform Strategy: I led the operational and technical strategy for Cobalt Strike after it was acquired.
+- Scale: Currently, a Principal Security Engineer at Amazon.
+
+My Approach
+
+I am a hands-on technical lead who prefers solving systemic issues over documenting theoretical flaws. I relay complex technical concepts in a way that is easy for engineers to consume and understand and focus on what matters.
+
+- Adversary Disruption: Moving past "simulation" to focus on whether a system can actually detect and stop a specific threat before it has an impact.
+- Bridging the Gap: Working between offensive and defensive teams to turn technical insights into direct improvements in visibility and response.
+- Focusing on What Matters: Pruning away the noise to concentrate security efforts where they will actually impact a threat's ability to succeed.
+
+I am here to disrupt the threat’s ability to succeed, not just document it.
 
 ---
 

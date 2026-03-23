@@ -1,7 +1,8 @@
 ---
 title: "Red Team Tradecraft and TTP Guidance"
-description: >
-  Red Team Tradecraft and TTP Guidance
+description: "Operational security, tradecraft principles, and TTP guidance for red team operators"
+sidebar_position: 2
+keywords: [red team tradecraft, OPSEC, operational security, TTPs, red team techniques, adversary tradecraft]
 ---
 
 :::info
