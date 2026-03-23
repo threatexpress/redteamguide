@@ -12,75 +12,84 @@ This set of checklists is intended to be a start to help plan and build a red te
 :::
 
 ## Red Team Development Checklist
-- &#9744; Determine required knowledge and skills
-	- &#9744; Identify and implement alternate methods for bridging knowledge gaps
-- &#9744; Develop roles and responsibilities guide
-- &#9744; Develop red team methodology
-- &#9744; Develop TTP guidance for engagements
-	- &#9744; Includes Bag of tricks
-- &#9744; Develop data collection guide and tools
-- &#9744; Develop operational process plan
-- &#9744; Develop communication plan template
-- &#9744; Develop ROE template
-- &#9744; Develop technical briefing template
-- &#9744; Develop report template
+
+- [ ] Determine required knowledge and skills
+    - [ ] Identify and implement alternate methods for bridging knowledge gaps
+- [ ] Develop roles and responsibilities guide
+- [ ] Develop red team methodology
+- [ ] Develop TTP guidance for engagements
+    - [ ] Includes Bag of tricks
+- [ ] Develop data collection guide and tools
+- [ ] Develop operational process plan
+- [ ] Develop communication plan template
+- [ ] Develop ROE template
+- [ ] Develop technical briefing template
+- [ ] Develop report template
 
 ## Planning - Red Team Engagement Checklist
-- &#9744; Engagement Planning
-	- &#9744; ROE
-		- &#9744; Event Communication plan
-		- &#9744; Distribute Deconfliction Process
-		- &#9744; Entry point/method
-		- &#9744; Scope
-		- &#9744; Goals/Objectives (should address at least one of the following)
-			- &#9744; Protect
-			- &#9744; Detect
-			- &#9744; Respond
-			- &#9744; Restore
-		- &#9744; Target Restrictions
-		- &#9744; Target Infrastructure / Asset verification / Approvals
-	- &#9744; Scenario Development
-	- &#9744; Operational Impact planning
-- &#9744; Develop threat profiles
-	- &#9744; Network and Host Activity
-	- &#9744; IOC Generation (incl subsequent Analysis) and Management
-- &#9744; Plan threat infrastructure
-    - &#9744; Tier 1
-       - &#9744; IPs
-       - &#9744; Systems
-       - &#9744; Redirectors
-       - &#9744; PPS
-    - &#9744; Tier 2
-      - &#9744; IPs
-      - &#9744; Systems
-      - &#9744; Redirectors
-      - &#9744; PPS
-    - &#9744; Tier 3
-     - &#9744; IPs
-     - &#9744; Systems
-     - &#9744; Redirectors
-     - &#9744; PPS
-	- &#9744; Deploy tools to infrastructure
-- &#9744; Data collection repository
+
+### Engagement Planning
+
+- [ ] Rules of Engagement (ROE)
+    - [ ] Event communication plan
+    - [ ] Distribute deconfliction process
+    - [ ] Entry point/method
+    - [ ] Scope
+    - [ ] Goals/Objectives (should address at least one)
+        - [ ] Protect
+        - [ ] Detect
+        - [ ] Respond
+        - [ ] Restore
+    - [ ] Target restrictions
+    - [ ] Target infrastructure / asset verification / approvals
+- [ ] Scenario development
+- [ ] Operational impact planning
+
+### Threat Profiles
+
+- [ ] Network and host activity
+- [ ] IOC generation (incl. subsequent analysis) and management
+
+### Threat Infrastructure
+
+Plan the following components for each infrastructure tier:
+
+| Component   | Tier 1 | Tier 2 | Tier 3 |
+|-------------|:------:|:------:|:------:|
+| IPs         | ☐      | ☐      | ☐      |
+| Systems     | ☐      | ☐      | ☐      |
+| Redirectors | ☐      | ☐      | ☐      |
+| PPS         | ☐      | ☐      | ☐      |
+
+- [ ] Deploy tools to infrastructure
+
+### Data Collection
+
+- [ ] Data collection repository
 
 ## Execution - Red Team Engagement Checklist
-- &#9744; Daily completion and roll-up confirmation
-	- &#9744; Capture logs
-	- &#9744; Capture screenshots
-	- &#9744; Capture system changes
-- &#9744; Daily (or twice daily) mandatory internal RT SITREP
-- &#9744; Update real-time attack diagram
+
+- [ ] Daily completion and roll-up confirmation
+    - [ ] Capture logs
+    - [ ] Capture screenshots
+    - [ ] Capture system changes
+- [ ] Daily (or twice daily) mandatory internal RT SITREP
+- [ ] Update real-time attack diagram
 
 ## Culmination - Red Team Engagement Checklist
-- &#9744; Engagement Closeout
-    - &#9744; Roll up data
-    - &#9744; Roll back system changes
-    - &#9744; Validate data has been collected
-    - &#9744; Outline critical attack diagram
-    - &#9744; Technical Review (tech-on-tech)
-    - &#9744; Executive Brief
-- &#9744; Reporting
-    - &#9744; Draft attack narrative
-    - &#9744; Draft observation and findings
-    - &#9744; Finalize attack diagram
-    - &#9744; Finalize report
+
+### Engagement Closeout
+
+- [ ] Roll up data
+- [ ] Roll back system changes
+- [ ] Validate data has been collected
+- [ ] Outline critical attack diagram
+- [ ] Technical review (tech-on-tech)
+- [ ] Executive brief
+
+### Reporting
+
+- [ ] Draft attack narrative
+- [ ] Draft observation and findings
+- [ ] Finalize attack diagram
+- [ ] Finalize report
