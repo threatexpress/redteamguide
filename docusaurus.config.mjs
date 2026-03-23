@@ -10,6 +10,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'redteam.guide',
   projectName: 'redteamguide',
+  trailingSlash: true,
 
   markdown: {
     mermaid: true,
