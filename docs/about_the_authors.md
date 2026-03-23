@@ -8,6 +8,8 @@ keywords: [red team authors, Joe Vest, James Tubberville, offensive security, re
 
 ## Joe Vest
 
+<img src="/img/joe-vest.png" alt="Joe Vest" width="150" />
+
 Twitter: <a href="https://twitter.com/joevest">@joevest</a>
 
 LinkedIn: <a href="https://www.linkedin.com/in/joe-vest">joe-vest</a>
