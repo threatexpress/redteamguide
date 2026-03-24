@@ -4,12 +4,13 @@ authors: [james]
 tags:
   - threat-mitigation
 slug: threat-mitigation-strategies-part-1
+description: "Observations and recommendations for mitigating common threats, focusing on high-impact defenses with straightforward implementation."
 ---
 
 _Full disclosure: This post is heavy on text. Much of the content is very broad and uses simplified examples. There are literally thousands of extremely cool and interesting ways to limit threat activity; however, I've decided to simplify and focus on those that could have the most significant impact with relatively easy implementation. Enjoy!_
 
 <!-- truncate -->
-![](./20180125_132744_attack.png)
+![Threat attack path diagram](./20180125_132744_attack.png)
 
 ## Topic
 

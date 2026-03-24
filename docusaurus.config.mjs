@@ -226,6 +226,7 @@ const config = {
         blog: {
           path: './blog',
           routeBasePath: 'blog',
+          blogDescription: 'Red team tradecraft, tool reviews, and operational insights from Joe Vest and James Tubberville.',
           showReadingTime: true,
           blogSidebarTitle: 'Recent Posts',
           blogSidebarCount: 'ALL',
@@ -239,6 +240,7 @@ const config = {
           anonymizeIP: true,
         },
         sitemap: {
+          lastmod: 'date',
           changefreq: 'weekly',
           priority: 0.5,
           filename: 'sitemap.xml',

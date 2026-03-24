@@ -5,9 +5,10 @@ tags:
   - cobalt-strike
   - infrastructure
 slug: automating-cs-profiles-mod-rewrite
+description: "Automate the conversion of Cobalt Strike Malleable C2 profiles into Apache mod_rewrite rules for intelligent HTTP traffic redirection."
 ---
 
-![](./cs2modrewriteargs.png)
+![cs2modrewrite script arguments and usage](./cs2modrewriteargs.png)
 
 This post describes a script I created to convert a Cobalt Strike Malleable C2 profile to corresponding mod_rewrite rules to enable intelligent HTTP proxying for redirection of C2 traffic. The script automates the [process](https://bluescreenofjeff.com/2016-06-28-cobalt-strike-http-c2-redirectors-with-apache-mod_rewrite/) described by well known redteamer and now co-worker – Jeff Dimmock ([@bluscreenofjeff](https://twitter.com/bluscreenofjeff)). Intelligent use of C2 redirectors is core to a mature C2 architecture that can withstand some gentle investigation and prodding. Developing Cobalt Strike compatible mod_rewrite rules to redirect traffic is not incredibly difficult, but there are a few Apache "gotchas" and the process can be error prone when dealing with multiple C2 profiles. Automation improves consistency and reduces the time needed to spin-up, test, and troubleshoot a unique and layered C2 infrastructure. It is always nice to start from a known good.
 

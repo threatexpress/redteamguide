@@ -4,6 +4,7 @@ authors: [joe]
 tags:
   - announcements
 slug: blog-updates
+description: "Recent updates including refreshed BloodHound docs, expanded red teaming references, and compiled presentations."
 ---
 
 The Threatexpress blog maintains an active presence in search results. We've undertaken a refresh effort to clarify existing resources.

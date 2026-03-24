@@ -5,6 +5,7 @@ tags:
   - infrastructure
   - tradecraft
 slug: expired-domains-red-team
+description: "How to find and use expired domains with existing reputation and categorization to bypass web filters during red team engagements."
 ---
 
 ## Overview
@@ -22,7 +23,7 @@ Let us ([@joevest](https://twitter.com/joevest) [@andrewchiles](https://twitter.
 
 ---
 
-![](./domainhunter_htmlreport.png)
+![DomainHunter HTML report for expired domains](./domainhunter_htmlreport.png)
 
 _**Example HTML Report Output for "bank"**_
 
@@ -73,7 +74,7 @@ Execute a basic query with reputation checks
 python ./domainhunter.py -q dogs -c
 ```
 
-![](./domainhunter_console.png)
+![DomainHunter console output with reputation checks](./domainhunter_console.png)
 
 _**Example Console Output with Reputation Checking**_
 

@@ -4,9 +4,10 @@ authors: [james]
 tags:
   - tools
 slug: git-clone-entire-org
+description: "Bash one-liners to clone or pull all repositories from a GitHub organization in a single command."
 ---
 
-![](./20180125_132744_attack.png)
+![Threat attack path diagram](./20180125_132744_attack.png)
 
 This is a short form post resulting from conversations over single line cloning and/or pulling of all organizational repos.
 

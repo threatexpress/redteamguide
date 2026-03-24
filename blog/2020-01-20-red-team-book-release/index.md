@@ -5,9 +5,10 @@ tags:
   - book
   - announcements
 slug: red-team-book-release
+description: "Announcing Red Team Development and Operations — a guide to planning, executing, and managing professional red team engagements."
 ---
 
-![](./book_cover_3d.png)
+![Red Team Development and Operations book cover](./book_cover_3d.png)
 
 "Red Team Development and Operations", Zero-Day Edition
 Joe Vest ([@joevest](https://www.twitter.com/joevest)) and James Tubberville ([@minis_io](https://www.twitter.com/minis_io))

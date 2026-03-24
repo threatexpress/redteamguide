@@ -5,6 +5,7 @@ tags:
   - book
   - announcements
 slug: audiobook-release
+description: "Announcing the audiobook edition of Red Team Development and Operations, now available on Amazon Audible."
 ---
 
 ![Book Cover](/img/book-cover.png)

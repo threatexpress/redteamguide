@@ -4,6 +4,7 @@ authors: [andrewchiles]
 tags:
   - tools
 slug: hostenum-updates
+description: "HostEnum PowerShell tool update — improved enumeration functions, object-based output, and new privilege escalation checks."
 ---
 
 **HostEnum** (formerly Invoke-HostEnum) has received some much needed attention in recent weeks and a new version is now available on the [ThreatExpress Github](https://www.github.com/threatexpress/red-team-scripts) (formerly https://www.github.com/minisllc). I've renamed the tool to simply HostEnum since it's actually a large collection of enumeration functions which are now individually called by the Invoke-HostEnum wrapper function. It's designed to provide a quick means of generating a comprehensive system profile and I've found it extremely useful for both offensive and defensive perspectives. Recent improvements include a breakout of enumeration functions, a transition from string output to objects for improved formatting and reporting capabilities, new enumeration checks, and addition of privilege escalation checks from @harmj0y's [PowerUp](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1).

@@ -5,9 +5,10 @@ tags:
   - c2
   - tools
 slug: c2-agent-comparison
+description: "Side-by-side comparison of popular C2 frameworks tested across Ubuntu, macOS, and Windows with various defensive configurations."
 ---
 
-![](./20180125_132744_attack.png)
+![Threat attack path diagram](./20180125_132744_attack.png)
 
 I was recently asked to perform an evaluation of multiple command and control (C2) agents. Rather than spending an exorbitant amount of time (that could be used building a custom C2) on an evaluation, I decided to perform a quick comparison of several popular C2 agents.
 

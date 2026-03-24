@@ -4,6 +4,7 @@ authors: [james]
 tags:
   - threat-mitigation
 slug: threat-mitigation-strategies-part-2
+description: "Technical recommendations and implementation guidance for defensive measures against common threat actions observed during red team engagements."
 ---
 
 _The following information was composed by Andrew Chiles (@andrewchiles), Joe Vest (@joevest) and myself (@minis_io) for quick and easy reference. Much of it was pulled together from a variety of sources with attempts to provide references for each. This post is intended to be more of a brain dump rather than a complete technical breakout._

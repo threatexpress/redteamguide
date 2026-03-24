@@ -5,6 +5,7 @@ tags:
   - cobalt-strike
   - tools
 slug: slack-notifications-cobalt-strike
+description: "Aggressor script for sending Slack notifications when new Cobalt Strike beacons check in during red team operations."
 ---
 
 We've seen several great incoming agent/shell notification mechanisms for Metasploit and Empire recently and the utility of being notified when new shells appear is without question. This is especially true when conducting phishing and social engineering style attacks or while waiting for a persistence mechanism to trigger. A recent example is [SlackShellBot](https://www.swordshield.com/2016/11/slackshellbot/) by @Ne0nd0g. We really like it, but often use Cobalt Strike heavily and thus need another notification method for CS.

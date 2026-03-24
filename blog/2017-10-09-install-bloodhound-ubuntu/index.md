@@ -5,9 +5,10 @@ tags:
   - bloodhound
   - tools
 slug: install-bloodhound-ubuntu
+description: "Quick reference for installing BloodHound and its Neo4j dependencies on Ubuntu Linux."
 ---
 
-![](./bloodhound_logo.png)
+![BloodHound logo](./bloodhound_logo.png)
 
 NOTE: This reference is outdated (version 4). I've learned that this blog still shows up in search engine results.
 

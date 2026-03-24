@@ -5,6 +5,7 @@ tags:
   - red-team
   - tradecraft
 slug: threat-gets-a-vote
+description: "Why robust security programs still fail against real threats, and how a threat-based approach to security testing closes the gap."
 ---
 
 Designing, deploying, and managing a comprehensive security program is not an easy task. An organization's security design is influenced and pressured from multiple, often competing, sources. This includes customers, compliance, management, peers, budget, public opinion, and news. This process is complex and challenging, but an organization is generally able to overcome the pressures and implement what is considered to be a robust security program. An organization is able to please the various parties and, at least on paper, describe a strong security program designed to stop malicious cyber-attacks. Audit and compliance checks pass with a green light. Robust patch management systems are deployed. Vulnerability assessments and penetration tests are conducted. In general, the organization has good security hygiene. These are all great steps in defending a network from attack, but unfortunately, often fall short in achieving the primary goal of preventing, detecting, and responding to real threats. Why? What is missing? The real question to consider is:
@@ -16,11 +17,11 @@ This post dives into the shortcomings of security operations design, implementat
 
 A security program includes many components; staff, policy, tools, management, oversight, incident response to name a few. The program is built by including members of several different divisions. Each contribute their security requirements to ultimately design and build the program. This is a great, but what, or better who, is often missing from this strategy? Has anyone on the team ever seen a bad guy?
 
-![](./threat_gets_a_vote.png)
+![Threat gets a vote in security planning](./threat_gets_a_vote.png)
 
 ## _Is the threat really included in security planning?_
 
-![](./were-looking-up-money-laundering-in-a-dictionary.jpg)
+![Looking up definitions in a dictionary meme](./were-looking-up-money-laundering-in-a-dictionary.jpg)
 
 Good intentions by a group of intelligent people do not add up to understanding threats or how they operate. If the goal of security operations is to prevent, detect, respond, and recover to malicious actions, it only makes sense to include the opinions of those who you are defending against.
 
@@ -80,7 +81,7 @@ These can be valuable actions that reduce the attack surface, but an intelligent
 
 ## A Threat Will…
 
-![](./athreatwill.png)
+![A threat will get in, stay in, and act](./athreatwill.png)
 
 To keep it simple, a threat-actor must **Get-In** to establish an initial foothold. This phase is generally quick, but defenders place heavy focus here. They must **Stay-In** by establishing command and control (C2). This is the phase where the threat maintains influence over the target. Actions may include persistence, target identification, lateral movement, and privilege escalation. The Stay-In phase provides the most opportunity to detect or impact a threat, but is often ignored or misunderstood. Finally, the threat-actor will **Act** or perform the actions that reflect why they attacked if the first place. Keeping security simple can help defenders be focused an apply an intelligent defense strategy instead of defending everything at once.
 
@@ -96,7 +97,7 @@ Red teaming can provide a deep understand of the negative impacts an intelligent
 
 Using an inverse pyramid, we can illustrate the relationships between Red Teaming, Penetration Testing, and Vulnerability Assessments. This will help further define what Red Teaming **IS** and **IS NOT**.
 
-![](./threat_pyramid.png)
+![Inverse pyramid of red teaming, pentesting, and vuln assessments](./threat_pyramid.png)
 
 Vulnerability assessments tend to be wide in coverage but narrow in scope. Consider a vulnerability assessment of all enterprise workstations. The scope is very wide, but not very deep in context of organizational risks. What can be said about risk when flaws are found? Organizational risk can only be understood at the workstation level? Overall risk to an organization may be extrapolated to a small degree, but generally stays at that workstation level. Vulnerability assessment are good at reducing the attack surface but do not provide much detail in terms of organizational risk.
 
@@ -127,13 +128,13 @@ Red teaming allows an organization to explore a wide range of threat activity. T
 
 The following illustrates the PDRR coverage of different assessment types.
 
-## ![](./pdrr.png)
+## ![PDRR coverage comparison across assessment types](./pdrr.png)
 
 When an organization is ready to understand the negative impacts caused by a threat-actor, a professional red team is used to provide the required threat emulation and stimulus. A professional red team has the ability to emulate a threat-actors TTPs in order to stimulate and engage security defenders against a realistic threat. Red teams may identify vulnerabilities and exploits, but these are only a means to an end. Red teams focus on engagement goals. This engages an organization with a realistic attack to better understand how they are able to impact a threat's ability to operate or cause negative impacts to the organization.
 
 Red teams can emulate realistic TTPs through research and experience. Much of this information has been complied in to a framework (ATT&CK) and organizations can use this to help measure their ability to defend against specific TTPs. MITRE's Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK™)[7] is a knowledge base and model for cyber threat behavior. ATT&CK is useful for understanding security risk against known threat behavior, for planning security improvements, and verifying defenses work as expected. ATT&CK can be thought of a menu of TTPs. Red teams can use this to ensure they have a comprehensive set of threat TTPs, and blue teams can use this to build a scorecard of how well they are able to defend against the various TTPs.
 
-![](./mitre-1.png)
+![MITRE ATT&CK framework matrix overview](./mitre-1.png)
 
 ATT&CK is broken into Tactics, Techniques, and Procedures. Tactics are the tactical goals a threat may use during an operation. Techniques describe the actions threats take to achieve their objectives. Procedures are the technical steps required to perform the action. This provides a classification of all threat actions regardless of the underlying vulnerabilities. Security operations can use this as a roadmap or scorecard to measure the ability to protect, detect, respond, and recover from a threat.
 

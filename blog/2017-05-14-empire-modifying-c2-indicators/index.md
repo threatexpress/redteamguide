@@ -6,6 +6,7 @@ tags:
   - c2
   - tradecraft
 slug: empire-modifying-c2-indicators
+description: "How to modify Empire's default server-side C2 indicators to avoid detection and fingerprinting during red team operations."
 ---
 
 ## Overview
@@ -24,14 +25,14 @@ A good example of identifying Empire infrastructure is detailed in a [Chokepoint
 How likely are asp, jsp, and php to exist together on the same web server? Payload staging is typically easy to identify no matter the C2 technology, but we can improve on Empire's default staging behavior.
 :::
 
-![](./empire_defaultstaging.png) **Empire – Default Staging URIs**
+![Empire default staging URIs configuration](./empire_defaultstaging.png) **Empire – Default Staging URIs**
 
 - Server technology
   - Default: Microsoft-IIS/7.5
 - Server content
   - Default: “It works!”
 
-![](./empire_default_server_page-1.png)
+![Empire default server page showing It Works](./empire_default_server_page-1.png)
 
 ---
 
@@ -99,7 +100,7 @@ SERVER_VERSION = "Microsoft-IIS/8.5"
 
 Notice we now have new staging URI's that don't stick out quite as much and the new client communication profile is also in use. The staging request length's don't change however so there is still plenty to signature.
 
-![](./empire_modifiedstagingbing.png) **Empire – Custom Bing Search Profile w/ Modified Staging URIs**
+![Empire modified staging with Bing search profile](./empire_modifiedstagingbing.png) **Empire – Custom Bing Search Profile w/ Modified Staging URIs**
 
 ### Modifying the default page
 
@@ -157,7 +158,7 @@ return page
 
 #### Results
 
-![](./empire_modified_server.png)
+![Empire modified server page mimicking Bing](./empire_modified_server.png)
 
 ## Summary
 

@@ -5,9 +5,10 @@ tags:
   - tools
   - tradecraft
 slug: metatwin-metadata-signatures
+description: "Using MetaTwin to copy Microsoft binary metadata and digital signatures onto payloads to blend into target environments."
 ---
 
-![](./metatwin.png)
+![MetaTwin tool logo](./metatwin.png)
 
 ## Overview
 
@@ -28,11 +29,11 @@ This is where [MetaTwin](https://github.com/threatexpress/metatwin) comes into p
 
 In this example, I'm simply using a default meterpreter reverse_tcp binary. Nothing special here, use any binary (.exe or .dll). Personally, we're huge fans of Cobalt Strike during real engagements.
 
-![](./metatwin.gif)
+![MetaTwin demo applying metadata to a binary](./metatwin.gif)
 
 | Before MetaTwin | After MetaTwin |
 | --------------- | -------------- |
-| ![](./20171007_202524_revmet-722x1024.png)         | ![](./after-1024x743.png)        |
+| ![Binary properties before MetaTwin modification](./20171007_202524_revmet-722x1024.png)         | ![Binary properties after MetaTwin modification](./after-1024x743.png)        |
 
 As you can see, the file looks and feels like it could belong there. Storing this in a location such as c:ProgramData... with a modified time stamp, **could** buy a Red Team operator a bit of time and support long(er) term persistence.
 
@@ -44,19 +45,19 @@ Often simple modifications can cause defensive tools to react in different ways.
 
 #### Default Reverse TCP Meterpreter Binary
 
-![](./plain_binary.png)
+![VirusTotal results for default meterpreter binary](./plain_binary.png)
 
 As expected, VirusTotal reported several hits
 
 #### Metadata added to Reverse TCP Meterpreter Binary
 
-![](./metadata_only.png)
+![VirusTotal results with metadata added](./metadata_only.png)
 
 Interestingly, adding metadata alone reduced the AV detection rate.
 
 #### Metadata and Digital Signature added to Reverse TCP Meterpreter Binary
 
-![](./metadata_signed.png)
+![VirusTotal results with metadata and signature](./metadata_signed.png)
 
 After adding a digital signature and the metadata, exposure dropped from 76% to 58%. This is important because we're not even trying to evade AV!
 
@@ -68,15 +69,15 @@ Using the modified binary, we created simple persistence mechanism using a sched
 
 ## **AutoRuns Default Settings Hide the "Microsoft" scheduled task**
 
-## ![](./autoruns_default.png)
+## ![AutoRuns hiding modified Microsoft scheduled task](./autoruns_default.png)
 
 **AutoRuns Default Options**
 
-## ![](./autoruns_options.png)
+## ![AutoRuns default options hiding Microsoft entries](./autoruns_options.png)
 
 **_Changing the Default Reveals the "Microsoft" scheduled task_**
 
-## ![](./autoruns_display.png)
+## ![AutoRuns revealing hidden scheduled task after settings change](./autoruns_display.png)
 
 ## **Takeaway**
 

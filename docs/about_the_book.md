@@ -30,7 +30,7 @@ The Red Team concept requires a different approach from typical security testing
 
 ### Joe Vest
 
-<img src="/img/joe_headshot.png" alt="Joe Vest" width="200" />
+<img src="/img/joe-vest.png" alt="Joe Vest" width="200" />
 
 Twitter: <a href="https://twitter.com/joevest">@joevest</a> | LinkedIn: <a href="https://www.linkedin.com/in/joe-vest">joe-vest</a>
 

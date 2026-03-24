@@ -203,7 +203,7 @@ function BookSection() {
 export default function Home() {
   return (
     <Layout
-      title="Red Team Guide — Guides, Templates & Tradecraft"
+      title="Red Team Guide"
       description="A reference for red team operations. Guides, templates, checklists, and tradecraft for red team development and operations.">
       <Head>
         <script type="application/ld+json">

@@ -6,9 +6,10 @@ tags:
   - c2
   - tradecraft
 slug: deep-dive-malleable-c2
+description: "Guide to designing Cobalt Strike Malleable C2 profiles — sleep times, user-agents, SSL, staging, memory indicators, and HTTP traffic customization."
 ---
 
-![](./deep_dive_malleable_c2.png)
+![Cobalt Strike malleable C2 profile overview](./deep_dive_malleable_c2.png)
 
 One of Cobalt Strike's most valuable features is its ability to modify the behavior of the Beacon payload. By changing various defaults within the framework, an operator can modify the memory footprint of Beacon, change how often it checks in, and even what Beacon's network traffic looks like. All of these features are controlled by the Malleable C2 profile, which is chosen when starting the team server.
 
@@ -67,15 +68,15 @@ Choose a profile name you would like to see in your reports. This does not affec
 
 ## Sleep Times
 
-![](./sleep.png)These settings control the default time between Beacon check in (in milliseconds). A new HTTP/S beacon spawned using this C2 profile will check in using the sleep time as its callback interval, plus a random amount of time up to the specified by the jitter percentage. Choose a default time that will suit your operational needs, along with any OPSEC considerations. This example uses 60 seconds. This may be too aggressive for many engagements, and some defensive products may quickly detect beaconing behavior if it is too regular.
+![Malleable C2 sleep time configuration](./sleep.png)These settings control the default time between Beacon check in (in milliseconds). A new HTTP/S beacon spawned using this C2 profile will check in using the sleep time as its callback interval, plus a random amount of time up to the specified by the jitter percentage. Choose a default time that will suit your operational needs, along with any OPSEC considerations. This example uses 60 seconds. This may be too aggressive for many engagements, and some defensive products may quickly detect beaconing behavior if it is too regular.
 
 ## User-Agent
 
-![](./useragent.png)Use a User-Agent value that fits with your engagement. If possible, try to capture a real User-Agent string from the target organization, to blend in with real traffic. For example, consider sending a benign e-mail with a web bug to target organization members and monitor the User-Agents sent in subsequent GET requests. If you are using plaintext HTTP traffic, or if SSL interception is in place in the target environment, a User-Agent string that doesn't match the environment can provide an indicator for defenders.
+![Malleable C2 user-agent string setting](./useragent.png)Use a User-Agent value that fits with your engagement. If possible, try to capture a real User-Agent string from the target organization, to blend in with real traffic. For example, consider sending a benign e-mail with a web bug to target organization members and monitor the User-Agents sent in subsequent GET requests. If you are using plaintext HTTP traffic, or if SSL interception is in place in the target environment, a User-Agent string that doesn't match the environment can provide an indicator for defenders.
 
 ## SSL Certificate
 
-![](./ssl.png)This setting controls the SSL certificate used for HTTPS communications. If possible, utilize a real, properly-issued SSL certificate for the domain you're using. LetsEncrypt can issue free SSL certificates that are trusted by all major operating systems and browsers, and will make it harder for defenders to inspect Beacon traffic.
+![Malleable C2 SSL certificate configuration](./ssl.png)This setting controls the SSL certificate used for HTTPS communications. If possible, utilize a real, properly-issued SSL certificate for the domain you're using. LetsEncrypt can issue free SSL certificates that are trusted by all major operating systems and browsers, and will make it harder for defenders to inspect Beacon traffic.
 
 SSL certificate store creation steps are well documented in
 
@@ -85,7 +86,7 @@ It is generally recommended to setup your target facing HTTPS certificates on re
 
 ## SpawnTo Process
 
-![](./spawnto.png)The spawnto settings control what process a beacon will spawn for post-exploitation jobs, and when using the spawn command. This command can even use command line parameters
+![Malleable C2 spawnto process setting](./spawnto.png)The spawnto settings control what process a beacon will spawn for post-exploitation jobs, and when using the spawn command. This command can even use command line parameters
 
 `set %windir%\sysnative\svchost.exe -k localservice -p -s fdPHost`
 
@@ -100,17 +101,17 @@ General Guidelines:
 
 ## SMB Beacons
 
-![](./smb.png)SMB Beacons use named pipes to communicate through a parent Beacon. This allows for peer-to-peer communication between Beacons on the same host or across the network. The SMB Beacon's pipe names can be configured. Do not use default settings, as some defensive products will look for these defaults. Try to choose something that will blend in with the target environment. Follow this link: [https://www.cobaltstrike.com/help-smb-beacon](https://www.cobaltstrike.com/help-smb-beacon) for more information on SMB Beacons.
+![Malleable C2 SMB beacon pipe configuration](./smb.png)SMB Beacons use named pipes to communicate through a parent Beacon. This allows for peer-to-peer communication between Beacons on the same host or across the network. The SMB Beacon's pipe names can be configured. Do not use default settings, as some defensive products will look for these defaults. Try to choose something that will blend in with the target environment. Follow this link: [https://www.cobaltstrike.com/help-smb-beacon](https://www.cobaltstrike.com/help-smb-beacon) for more information on SMB Beacons.
 
 ## DNS Beacons
 
-![](./dns.png)DNS Beacons use DNS for all or part of their communications. Depending on the target environment's defensive technologies, DNS traffic can be easily detected, but is often a blind spot for defenders. DNS is best used as low and slow backup channel. Change the defaults to better fit your engagement. Follow this link [https://www.cobaltstrike.com/help-dns-beacon](https://www.cobaltstrike.com/help-dns-beacon) for more information on DNS Beacons.
+![Malleable C2 DNS beacon configuration](./dns.png)DNS Beacons use DNS for all or part of their communications. Depending on the target environment's defensive technologies, DNS traffic can be easily detected, but is often a blind spot for defenders. DNS is best used as low and slow backup channel. Change the defaults to better fit your engagement. Follow this link [https://www.cobaltstrike.com/help-dns-beacon](https://www.cobaltstrike.com/help-dns-beacon) for more information on DNS Beacons.
 
 ## Staging Process
 
-![](./staging.png)… truncated…
+![Malleable C2 staging process configuration](./staging.png)… truncated…
 
-![](./staging2.png) The Beacon staging process can be customized. The staging process is the stub of code used to fully load a Beacon. Read this post https://blog.cobaltstrike.com/2013/06/28/staged-payloads-what-pen-testers-should-know/ to learn more about the Beacon staging process. Fortunately, the HTTP characteristics of the Beacon stager can be modified. Change these settings to mimic a single legitimate HTTP request/response.
+![Malleable C2 staging HTTP request customization](./staging2.png) The Beacon staging process can be customized. The staging process is the stub of code used to fully load a Beacon. Read this post https://blog.cobaltstrike.com/2013/06/28/staged-payloads-what-pen-testers-should-know/ to learn more about the Beacon staging process. Fortunately, the HTTP characteristics of the Beacon stager can be modified. Change these settings to mimic a single legitimate HTTP request/response.
 
 In this example the requests are sent to **/jquery-3.3.1.slim.min.js** or **/jquery-3.3.2.slim.min.js**, dependent on the target process architecture, to begin the staging process. The HTTP server parameters are built to mimic a jQuery request. The Beacon commands and payloads are blended in to a chunk of the jQuery javascript text. The client makes a request that is reasonable when requesting jQuery from content delivery network. Many websites do this with **http://www.google-analytics.com/ga.js"> src="jquery-3.3.1.min.js">**. The URIs can be modified to look like other CDNs. For example, you could modify the http-stager to look as if it is pulling from the Microsoft jQuery CDN. https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js
 
@@ -118,11 +119,11 @@ In some cases, it may be better to use stageless payloads, as the staging proces
 
 ## Memory Indicators
 
-![](./memory.png) Some of the newest Malleable C2 features enable modification of many Beacon memory indicators. This topic can get quite deep and deserves it own blog post. Refer to https://blog.cobaltstrike.com/2018/02/08/in-memory-evasion/ and https://www.youtube.com/playlist?list=PL9HO6M_MU2nc5Q31qd2CwpZ8J4KFMhgnK for details on controlling Beacon memory indicators. This example uses the peclone tool to rip the memory metadata from explorer.exe, save as part of the Beacon payload, and uses several of the recommendations from Raphael's "In Memory Evasion" blogpost.
+![Malleable C2 memory indicator settings](./memory.png) Some of the newest Malleable C2 features enable modification of many Beacon memory indicators. This topic can get quite deep and deserves it own blog post. Refer to https://blog.cobaltstrike.com/2018/02/08/in-memory-evasion/ and https://www.youtube.com/playlist?list=PL9HO6M_MU2nc5Q31qd2CwpZ8J4KFMhgnK for details on controlling Beacon memory indicators. This example uses the peclone tool to rip the memory metadata from explorer.exe, save as part of the Beacon payload, and uses several of the recommendations from Raphael's "In Memory Evasion" blogpost.
 
 ## HTTP GET
 
-![](./httpget.png)… truncated…
+![Malleable C2 HTTP GET request configuration](./httpget.png)… truncated…
 
 Like the http-stager section, the HTTP GET requests/responses can be modified. This section is used to check a teamserver for tasks. More information can be found here [https://www.cobaltstrike.com/help-http-beacon](https://www.cobaltstrike.com/help-http-beacon). This profile uses a similar format found in the http-stager. The difference is the use of the cookie **\_\_cfduid=**. This value contains information about the Beacon and is used by the teamserver to issue tasks. The teamserver responds with a task hidden in the jQuery javascript text. Modify this section to match the HTTP traffic you would like to use. If you choose to use a GET-only profile (see below), this is also how Beacon transmits information back to the teamserver.
 
@@ -132,7 +133,7 @@ The **set uri** option can accept multiple URIs. This can be used to add diversi
 
 ## HTTP POST
 
-![](./httppost.png) Like the http-stager and http-get sections, the HTTP-POST requests/responses can be modified. The HTTP-POST section serves as Beacon's response to commands issued by the server and can actually be performed as a HTTP GET or HTTP POST request. This example uses an HTTP POST as shown with **set verb "POST";** The HTTP traffic follows the same style of the HTTP-GET section and mimics a jQuery request. You can change the mode from HTTP-POST to HTTP-GET by commenting out the POST section and uncommenting the GET section of HTTP-POST.
+![Malleable C2 HTTP POST request configuration](./httppost.png) Like the http-stager and http-get sections, the HTTP-POST requests/responses can be modified. The HTTP-POST section serves as Beacon's response to commands issued by the server and can actually be performed as a HTTP GET or HTTP POST request. This example uses an HTTP POST as shown with **set verb "POST";** The HTTP traffic follows the same style of the HTTP-GET section and mimics a jQuery request. You can change the mode from HTTP-POST to HTTP-GET by commenting out the POST section and uncommenting the GET section of HTTP-POST.
 
 :::note[GET-Only Profiles have Trade-offs]
 GET-Only profiles have some trade-offs and may leave you scratching your head when attempting to pull large amounts of data (i.e. download a file or take a screenshot). This is due to the way data is transmitted within the URI, URI parameters, or Headers. This side-effect is well documented by Raphael at

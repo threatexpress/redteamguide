@@ -5,9 +5,10 @@ tags:
   - tools
   - red-team
 slug: event-data-collector
+description: "Event Data Collector (EDC) is a Django app for capturing and organizing red team operational data during engagements."
 ---
 
-![](./edc_login.png)
+![EDC login page](./edc_login.png)
 
 Event Data Collector (EDC) is a very basic django application used to capture data on the fly.
 
@@ -36,22 +37,22 @@ Views are based off templates rather than builds. This enables the team to choos
 **Examples:**
 
 _Full oplog view_
-![](./edc_oplog.png)
+![EDC full operator log view](./edc_oplog.png)
 
 _oplog command and output_
-![](./edc_cmd_out.png)
+![EDC oplog command and output detail](./edc_cmd_out.png)
 
 _Targets View_
-![](./edc_target.png)
+![EDC targets view](./edc_target.png)
 
 _Credentials View_
-![](./edc_creds.png)
+![EDC credentials view](./edc_creds.png)
 
 _Payloads_
-![](./edc_payload.png)
+![EDC payloads view](./edc_payload.png)
 
 _Deconfliction_
-![](./edc_decon.png)
+![EDC deconfliction view](./edc_decon.png)
 
 #### URLs
 
@@ -87,7 +88,7 @@ EDC requires an account to be assigned a role for any access. Although individua
 - Operator: Operator or keyboarder - Has privileges to most edc actions less some permanent delete
 - WhiteCell: Has only view privileges for Info and Deconfliction - Trusted Agent, Observer, Data Scientist, etc.
 
-![](./edc_roles.png)
+![EDC role-based permission groups](./edc_roles.png)
 
 #### Role Permissions
 
@@ -147,9 +148,9 @@ It is recommended to create new accounts and remove the examples once functional
 All accounts have the option for 2FA (Authenticator App).
 Each account will need to enable 2FA via profile.
 
-![](./edc_2fa.png)
+![EDC two-factor authentication setup](./edc_2fa.png)
 
-![](./edc_2fa_2.png)
+![EDC two-factor authentication QR code](./edc_2fa_2.png)
 
 ---
 
@@ -188,7 +189,7 @@ Each account will need to enable 2FA via profile.
 
 - Tags can be any desired keyword useful to your team. These can be used to create a quick view for your desired case (i.e. identify all tagged findings)
 
-![](./edc_tags.png)
+![EDC tag-based log filtering](./edc_tags.png)
 
 - User tokens must be passed for access to the rest framework.
 - All views have an associated template (vs. a tables build). Adding or removing fields from view is a simple as adding/removing from the template.
@@ -214,7 +215,7 @@ Each account will need to enable 2FA via profile.
     target -h
 ```
 
-![](./edc_log.png)
+![EDC bash log submission function](./edc_log.png)
 
 - API (curl examples)
 

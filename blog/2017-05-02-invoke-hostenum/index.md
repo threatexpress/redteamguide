@@ -4,6 +4,7 @@ authors: [andrewchiles]
 tags:
   - tools
 slug: invoke-hostenum
+description: "Invoke-HostEnum is a PowerShell tool for comprehensive post-exploitation host enumeration and situational awareness."
 ---
 
 ## Overview
@@ -87,7 +88,7 @@ sub enumerate {
 }
 ```
 
-![](./hostenum_cs.gif) **Invoke-HostEnum Execution in Cobalt Strike**
+![Invoke-HostEnum running in Cobalt Strike Beacon](./hostenum_cs.gif) **Invoke-HostEnum Execution in Cobalt Strike**
 
 ### **PowerShell Empire**
 
@@ -119,7 +120,7 @@ Execute the module
 (Empire: situational_awareness/host/hostenum) > run
 ```
 
-![](./hostenum_empire1.png) **Invoke-HostEnum Empire Module**
+![Invoke-HostEnum module running in Empire](./hostenum_empire1.png) **Invoke-HostEnum Empire Module**
 
 ---
 

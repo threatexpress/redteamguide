@@ -5,6 +5,7 @@ tags:
   - bloodhound
   - tools
 slug: install-bloodhound-ce
+description: "Step-by-step guide to installing BloodHound Community Edition on Linux using Docker."
 ---
 
 This guide provides quick installation steps for BloodHound CE using Docker on Linux systems. For comprehensive details, consult the official quickstart guide.

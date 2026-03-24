@@ -5,6 +5,7 @@ tags:
   - tools
   - tradecraft
 slug: subshell-tinyshell-webshells
+description: "SubShell and TinyShell are custom covert web shells designed to minimize detection while providing post-exploitation C2 channels."
 ---
 
 ![subshell](./subshell.png)![tinyshell](./tinyshell.png)

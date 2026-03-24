@@ -5,6 +5,7 @@ tags:
   - tools
   - infrastructure
 slug: threatbox
+description: "ThreatBox provides a standard, repeatable attack platform for red teams with controlled tooling, logging, and operational consistency."
 ---
 
 [threatbox](http://github.com/threatexpress/threatbox)
@@ -113,29 +114,29 @@ VNC over SSH ![VNC over SSH](./vnc_over_ssh.png)
 
 ThreatBox ![threatbox](./threatbox.png)
 
-Tracking of installed tools ![](./tool_tracking.png)
+Tracking of installed tools ![ThreatBox installed tools tracking list](./tool_tracking.png)
 
-Custom terminal options provide more context ![](./custom_terminal.png)
+Custom terminal options provide more context ![ThreatBox custom terminal with context options](./custom_terminal.png)
 
-Light version of the terminal ![](./light_theme.png)
+Light version of the terminal ![ThreatBox terminal light theme](./light_theme.png)
 
-Attack platform custom commands ![](./help.png)
+Attack platform custom commands ![ThreatBox custom help commands output](./help.png)
 
-Automatic logging of terminals ![](./terminal_logs.png)
+Automatic logging of terminals ![ThreatBox automatic terminal logging output](./terminal_logs.png)
 
-Tool categories ![](./tool_category.png)
+Tool categories ![ThreatBox tool categories listing](./tool_category.png)
 
 Pipenv used to control python projects
 
-![](./pipenv.png)
+![Pipenv managing Python project dependencies](./pipenv.png)
 
-![](./pipenv_shell.png)
+![Pipenv shell session for Python project](./pipenv_shell.png)
 
 ---
 
 ## Red Team Development and Operations
 
-![](./book_cover_3d.png)
+![Red Team Development and Operations book cover](./book_cover_3d.png)
 
 [Paperback - "Red Team Development and Operations", Zero-Day Edition](https://www.amazon.com/dp/B083XVG633/ref=sr_1_2?keywords=red+team+development)
 
