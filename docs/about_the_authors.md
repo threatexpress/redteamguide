@@ -20,7 +20,7 @@ I am not interested in "findings-based" testing that just grows a backlog of vul
 
 What I’ve Done
 
-- Authorship: I wrote the foundational text _Red Team Development and Operations_ and developed the original SANS Red Team course (SEC564).
+- Authorship: I wrote the foundational text _[Red Team Development and Operations](/docs/about_the_book/)_ and developed the original SANS Red Team course (SEC564).
 - Foundership: I founded MINIS LLC, a specialized offensive security consultancy, and led it through its acquisition by SpecterOps.
 - Platform Strategy: I led the operational and technical strategy for Cobalt Strike after it was acquired.
 - Scale: Currently, a Principal Security Engineer at Amazon.

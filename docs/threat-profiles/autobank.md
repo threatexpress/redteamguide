@@ -9,7 +9,7 @@ keywords: [threat profile, AUTOBANK, adversary emulation, red team exercise, thr
 # Threat Profile (AUTOBANK)
 
 :::tip
-A modified version of this profile was used on an assumed breach engagement. This profile is provide as an example to show details that supported a real engagement. 
+A modified version of this profile was used on an assumed breach engagement. This profile is provided as an example to show details that supported a real engagement. See the [threat decomposition exercise](/docs/Exercises/threat-profile/) for guidance on building your own profiles using [MITRE ATT&CK](/docs/Concepts/mitre_attack/). 
 :::
 
 ## Description

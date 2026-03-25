@@ -26,7 +26,7 @@ The Red Team concept requires a different approach from typical security testing
 
 <iframe width="100%" style={{aspectRatio: '16/9'}} src="https://www.youtube.com/embed/SQYBwVY8g9I" title="Red Team Development and Operations Overview" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
 
-## About the Authors
+## [About the Authors](/docs/about_the_authors/)
 
 ### Joe Vest
 

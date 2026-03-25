@@ -17,25 +17,25 @@ This set of checklists is intended to be a start to help plan and build a red te
     - [ ] Identify and implement alternate methods for bridging knowledge gaps
 - [ ] Develop roles and responsibilities guide
 - [ ] Develop red team methodology
-- [ ] Develop TTP guidance for engagements
+- [ ] Develop [TTP guidance](/docs/Planning/red-team-tradecraft/) for engagements
     - [ ] Includes Bag of tricks
 - [ ] Develop data collection guide and tools
 - [ ] Develop operational process plan
 - [ ] Develop communication plan template
-- [ ] Develop ROE template
+- [ ] Develop [ROE template](/docs/Templates/roe_template/)
 - [ ] Develop technical briefing template
-- [ ] Develop report template
+- [ ] Develop [report template](/docs/Templates/report_template/)
 
 ## Planning - Red Team Engagement Checklist
 
 ### Engagement Planning
 
-- [ ] Rules of Engagement (ROE)
+- [ ] [Rules of Engagement (ROE)](/docs/checklists/roe-planning/)
     - [ ] Event communication plan
     - [ ] Distribute deconfliction process
     - [ ] Entry point/method
     - [ ] Scope
-    - [ ] Goals/Objectives (should address at least one)
+    - [ ] [Goals/Objectives](/docs/Planning/goal-planning/) (should address at least one)
         - [ ] Protect
         - [ ] Detect
         - [ ] Respond

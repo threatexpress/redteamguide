@@ -2,7 +2,7 @@ import blink from './src/blink/index.js';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Red Team Development and Operations',
+  title: 'RedTeam.Guide',
   tagline: 'A reference for red team operations',
   url: 'https://redteam.guide',
   baseUrl: '/',
@@ -34,7 +34,7 @@ const config = {
   themeConfig: {
     metadata: [
       {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:title', content: 'Red Team Development and Operations'},
+      {name: 'twitter:title', content: 'RedTeam.Guide'},
       {name: 'twitter:description', content: 'Guides, templates, and tradecraft for red team operations by Joe Vest and James Tubberville'},
       {name: 'twitter:image', content: 'https://redteam.guide/img/og-image.png'},
       {property: 'og:type', content: 'website'},
@@ -168,8 +168,23 @@ const config = {
         url: 'https://redteam.guide',
         description: 'A reference for red team operations',
         author: [
-          {'@type': 'Person', name: 'Joe Vest'},
-          {'@type': 'Person', name: 'James Tubberville'},
+          {
+            '@type': 'Person',
+            name: 'Joe Vest',
+            jobTitle: 'Principal Security Engineer',
+            worksFor: {'@type': 'Organization', name: 'Amazon'},
+            description: 'Author of Red Team Development and Operations, creator of the original SANS SEC564 course, 20+ years in offensive security.',
+            sameAs: [
+              'https://twitter.com/joevest',
+              'https://www.linkedin.com/in/joe-vest',
+            ],
+          },
+          {
+            '@type': 'Person',
+            name: 'James Tubberville',
+            description: 'Co-author of Red Team Development and Operations, co-creator of the original SANS SEC564 course, 22+ years in cybersecurity including red team leadership and CISO roles.',
+            sameAs: ['https://twitter.com/minis_io'],
+          },
         ],
       }),
     },
@@ -241,9 +256,29 @@ const config = {
         },
         sitemap: {
           lastmod: 'date',
-          changefreq: 'weekly',
-          priority: 0.5,
           filename: 'sitemap.xml',
+          createSitemapItems: async (params) => {
+            const {defaultCreateSitemapItems, ...rest} = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.map((item) => {
+              if (item.url.match(/redteam\.guide\/$/)) {
+                return {...item, changefreq: 'weekly', priority: 1.0};
+              }
+              if (item.url.includes('/docs/Concepts/') || item.url.includes('/docs/checklists/') || item.url.includes('/docs/definitions')) {
+                return {...item, changefreq: 'monthly', priority: 0.8};
+              }
+              if (item.url.includes('/docs/')) {
+                return {...item, changefreq: 'monthly', priority: 0.7};
+              }
+              if (item.url.includes('/blog/') && !item.url.includes('/tags/') && !item.url.includes('/archive/')) {
+                return {...item, changefreq: 'monthly', priority: 0.6};
+              }
+              if (item.url.includes('/tags/') || item.url.includes('/category/') || item.url.includes('/archive/')) {
+                return {...item, changefreq: 'monthly', priority: 0.3};
+              }
+              return {...item, changefreq: 'monthly', priority: 0.5};
+            });
+          },
         },
         theme: {
           customCss: './src/css/custom.css',

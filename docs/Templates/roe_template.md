@@ -14,7 +14,7 @@ This is a sample rules of engagement document. Use this as a starting point or r
 
 # Red Team Rules of Engagement
 
-[ __Company Name and Logo__ ] __i♥redteams, Inc.__  ![](/templates/redteam.png)  
+[ __Company Name and Logo__ ] __i♥redteams, Inc.__  ![Red team company logo](/templates/redteam.png)  
 
 [ __TARGET NAME / CUSTOMER__ ] __ABC Industries, Inc.__
 

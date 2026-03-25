@@ -8,7 +8,7 @@ keywords: [threat profile, CYBERSNAKE, adversary emulation, red team exercise, t
 # Threat Profile (CYBERSNAKE)
 
 :::tip
-A modified version of this profile was used on an assumed breach engagement. This profile is provide as an example to show details that supported a real engagement. A key focus of this profile is the use of DNS for C2. 
+A modified version of this profile was used on an assumed breach engagement. This profile is provided as an example to show details that supported a real engagement. A key focus of this profile is the use of DNS for C2. See the [threat decomposition exercise](/docs/Exercises/threat-profile/) for guidance on building profiles using [MITRE ATT&CK](/docs/Concepts/mitre_attack/). 
 :::
 
 ## Description

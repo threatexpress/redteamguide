@@ -21,7 +21,7 @@ Security testing of any sort is ultimately about managing organization risk to t
 
 Using an inverse pyramid, we can illustrate the relationships between Red Teaming, Penetration Testing, and Vulnerability Assessments. This will help further define what Red Teaming IS and IS NOT.
 
-![](/img/threat_pyramid.png)
+![Inverse pyramid showing the relationship between vulnerability assessments, penetration tests, and red team engagements](/img/threat_pyramid.png)
 
 - __Vulnerability assessments__ tend to be wide in coverage but narrow in scope. Consider a vulnerability assessment of all enterprise workstations. The scope is very wide, but not very deep in context of organizational risks. What can be said about risk when flaws are found? Organizational risk can only be understood at the workstation level? Overall risk to an organization may be extrapolated to a small degree, but generally stays at that workstation level. Vulnerability assessments are good at reducing the attack surface but do not provide direct information in terms of organizational risk.
 - __Penetrations tests__ take vulnerability assessments to the next level by exploiting and proving out attack paths. Penetration tests can often look and feel like a red team engagement and even use some of the same tools or techniques. The key difference lies in the goals and intent. The goal of a penetration test is to execute an attack against a target system to identify and measure risks associated with the exploitation of a target’s attack surface. Organizational risks can be indirectly measured and are typically extrapolated from some technical attack. What about the people and processes? This is where red teaming fits.

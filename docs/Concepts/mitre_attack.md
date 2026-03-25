@@ -11,7 +11,7 @@ keywords: [MITRE ATT&CK, red team, adversary emulation, threat framework, TTPs, 
 MITRE’s Adversarial Tactics, Techniques, and Common Knowledge (ATT&CK™) is a curated knowledge base and model for cyber adversary behavior, reflecting the various phases of an adversary’s lifecycle and the platforms they are known to target. ATT&CK is useful for understanding security risk against known adversary behavior, for planning security improvements, and verifying defenses work as expected.
 :::
 
-![](/img/mitre-1.png)
+![MITRE ATT&CK framework matrix showing tactics and techniques](/img/mitre-1.png)
 
 __ATT&CK is broken into Tactics, Techniques, and Procedures__
 
@@ -21,7 +21,7 @@ __ATT&CK is broken into Tactics, Techniques, and Procedures__
 
 This frameworks provides a classification of all threat actions regardless of the underlying vulnerabilities. 
 
-Red teams can emulate realistic TTPs through research and experience.  Much of this information has been complied in to ATT&CK. ATT&CK can be thought of a menu of TTPs. Red teams can use this to ensure they have a comprehensive set of threat TTPs, and blue teams can use this to build a scorecard of how well they are able to defend against various TTPs.
+Red teams can emulate realistic TTPs through research and experience.  Much of this information has been complied in to ATT&CK. ATT&CK can be thought of a menu of TTPs. Red teams can use this to ensure they have a comprehensive set of threat TTPs when building [threat profiles](/docs/category/threat-profiles/), and blue teams can use this to build a scorecard of how well they are able to defend against various TTPs. See the [threat decomposition exercise](/docs/Exercises/threat-profile/) for a walkthrough of applying ATT&CK to build an actionable profile.
 
 ## References
 

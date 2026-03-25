@@ -9,8 +9,23 @@ const bookSchema = {
   '@type': 'Book',
   name: 'Red Team Development and Operations',
   author: [
-    {'@type': 'Person', name: 'Joe Vest'},
-    {'@type': 'Person', name: 'James Tubberville'},
+    {
+      '@type': 'Person',
+      name: 'Joe Vest',
+      jobTitle: 'Principal Security Engineer',
+      worksFor: {'@type': 'Organization', name: 'Amazon'},
+      description: 'Author of Red Team Development and Operations, creator of the original SANS SEC564 course, 20+ years in offensive security.',
+      sameAs: [
+        'https://twitter.com/joevest',
+        'https://www.linkedin.com/in/joe-vest',
+      ],
+    },
+    {
+      '@type': 'Person',
+      name: 'James Tubberville',
+      description: 'Co-author of Red Team Development and Operations, co-creator of the original SANS SEC564 course, 22+ years in cybersecurity including red team leadership and CISO roles.',
+      sameAs: ['https://twitter.com/minis_io'],
+    },
   ],
   url: 'https://redteam.guide/docs/about_the_book',
   image: 'https://redteam.guide/img/book-cover.png',

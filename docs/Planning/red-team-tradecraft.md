@@ -130,7 +130,7 @@ Internal encryption is another example of where peers should be consulted to det
 As tempting as it may be, do not attack unencrypted websites. Simple attacks can trigger IDS. Always know your target IP space. There are likely several websites available for review. Proper reconnaissance and/or coordination should have discovered each. Create a list of sites in your target log. Include IP, URLs, an educated guess at the function, ports, protocols, etc.
 
  Important Note!
-Prior to performing any exploitation and attacks against a web server, refer to your rules of engagement and fully understand:
+Prior to performing any exploitation and attacks against a web server, refer to your [rules of engagement](/docs/Templates/roe_template/) and fully understand:
 
 - Who actually owns the website?
 - Who owns the system where the website is hosted? Who owns the backend application?

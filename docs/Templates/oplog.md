@@ -6,7 +6,7 @@ keywords: [operator log, OPLOG, red team logging, engagement tracking, red team 
 ---
 ## Example Operator Log
 
-This operator log example shows the type of detail needed to describe an action taken by a red team operator.
+This operator log example shows the type of detail needed to describe an action taken by a red team operator. See the [tradecraft guidance](/docs/Planning/red-team-tradecraft/) for logging requirements.
 
 |Start          |End            |Source IP  |Destination IP|Destination Port|Destination System|Pivot IP |Pivot Port|URL|Tool/App|Command                                      |Description                                                   |Output        |Result                  |System Modification|Comments                             |Operator Name|
 |---------------|---------------|-----------|--------------|----------------|------------------|---------|----------|---|--------|---------------------------------------------|--------------------------------------------------------------|--------------|------------------------|-------------------|-------------------------------------|-------------|

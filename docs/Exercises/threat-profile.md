@@ -32,7 +32,7 @@ __Goal__
 
 As professional Red Team, you understand that emulating a specific threat actor is not easy or feasible. Instead of redesigning Energetic Bear, you understand focus should be on the emulation of a threat’s TTPs. This is more valuable that emulating a specific threat actor. The goal is not document the Energetic Bear threat actor but to create a threat profile document using Energetic Bear as inspiration. You will use research on Energetic Bear's TTPs to build out a custom threat profile that is technically feasible and can be used to engage the target with realistic threat TTPs. A complete threat profile will contain details that can be used to plan and design the execution of a threat against a target. These are typically deployed as a command and control channel. We will discuss command and control in more detail later. 
 
-Use Energetic Bear references, MITRE, ATT&CK, personal experience, and intuition to develop the profile. Remember, this is your interpretation of a threat using a specific threat actor as inspiration.
+Use Energetic Bear references, [MITRE ATT&CK](/docs/Concepts/mitre_attack/), personal experience, and intuition to develop the profile. Remember, this is your interpretation of a threat using a specific threat actor as inspiration.
 
 __Resources__
 
@@ -58,7 +58,7 @@ __Resources__
 
 Threat profiles typically support the engagement story and are used to describe the technical aspects of a single C2 channel. A single threat profile is used for each C2 channel.
 
-![](/img/exercises/threatprofilediagram.png)
+![Diagram showing how threat profiles map to C2 channels in a red team engagement](/img/exercises/threatprofilediagram.png)
 
 ### Highlights from Energetic Bear Threat Actor
 
@@ -74,7 +74,7 @@ Threat profiles typically support the engagement story and are used to describe 
 
 ### IOCs from the actor Energetic Bear and the HAVEX malware
 
-![](/img/exercises/threatprofile_0.png)
+![Indicators of compromise from the Energetic Bear threat actor and HAVEX malware](/img/exercises/threatprofile_0.png)
 
 __Actor__
 
@@ -118,7 +118,7 @@ Run key registry modifications:
 
 __HAVEX Paylod Delivery__
 
-![](/img/exercises/threatprofile_1.png)
+![HAVEX malware payload delivery methods including spear-phishing, watering hole, and compromised software](/img/exercises/threatprofile_1.png)
 
 Energetic Bear used three major methods to deliver malware.
 
@@ -245,7 +245,7 @@ Headers:
 
 ## Conclusion
 
-In this exercise, you examined the Energetic Bear threat actor in order to design what a threat profile can be.
+In this exercise, you examined the Energetic Bear threat actor in order to design what a threat profile can be. See the [example threat profiles](/docs/category/threat-profiles/) for completed profiles used in real engagements.
 
 - You learned which IOCs are exposed when tools are kept to their default settings.
 - You learned that the testing of tools before use is critical in understanding a tool’s IOC profile.

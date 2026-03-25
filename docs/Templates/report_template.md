@@ -15,7 +15,7 @@ This is a sample red team report. Use this as a starting point or reference to c
 # Red Team Report
 
 
-[ __Company Name and Logo__ ] __i♥redteams, Inc.__  ![](/templates/redteam.png)  
+[ __Company Name and Logo__ ] __i♥redteams, Inc.__  ![Red team company logo](/templates/redteam.png)  
 
 [ __TARGET NAME / CUSTOMER__ ] __ABC Industries, Inc.__
 
@@ -93,19 +93,19 @@ Normal text Normal text Normal text Normal text Normal text Normal text Normal t
 
 The following section outlines the sequence of events and highlights the key points during the engagement.
 
-![](/templates/attack_narrative_diagram.png) 
+![Attack narrative diagram showing the sequence of events during the red team engagement](/templates/attack_narrative_diagram.png) 
 
 ### Critical Step 1 
 
 [ __Crital step details. Include enough details to describe the observations__ ]
 
-![](/templates/critical_step.png) 
+![Screenshot placeholder for critical step evidence](/templates/critical_step.png) 
 
 ### Critical Step 2
 
 [ __Crital step details. Include enough details to describe the observations__ ]
 
-![](/templates/critical_step.png) 
+![Screenshot placeholder for critical step evidence](/templates/critical_step.png) 
 
 ## Observations an Recommendations
 

@@ -9,7 +9,7 @@ keywords: [threat profile, BLUEHEART, adversary emulation, red team exercise, th
 # Threat Profile (BLUEHEART)
 
 :::tip
-This example can be used as a reference and would generate as part of threat decomposition and threat profile design.
+This example can be used as a reference and would generate as part of [threat decomposition](/docs/Exercises/threat-profile/) and threat profile design using [MITRE ATT&CK](/docs/Concepts/mitre_attack/).
 :::
 
 ## Description

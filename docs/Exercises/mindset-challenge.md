@@ -5,11 +5,11 @@ sidebar_position: 1
 keywords: [adversarial mindset, red team exercise, threat emulation, offensive thinking, red team training]
 ---
 
-![](/img/exercises/mindset_0.png)
+![Adversarial mindset challenge exercise header](/img/exercises/mindset_0.png)
 
 ## Description
 
-In the exercise, you’ll quickly complete a series of puzzle challenges designed to encourage critical thinking in a short time frame.
+In the exercise, you’ll quickly complete a series of puzzle challenges designed to encourage critical thinking in a short time frame. An adversarial mindset is a foundational skill for [red teaming](/docs/Concepts/red-teaming/).
 
 ## Instructions
 
@@ -43,7 +43,7 @@ Instructions:
 
 Placing your pen on the page only once, draw four straight lines that pass through all nine dots without lifting the pen from the page. 
 
-![](/img/exercises/mindset_1.png)
+![Nine dot puzzle grid — draw four straight lines through all dots without lifting your pen](/img/exercises/mindset_1.png)
 
 <br />
 <br />
@@ -58,7 +58,7 @@ Instructions:
 
 Draw a line from the laptop to the data center.
 
-![](/img/exercises/mindset_2.png)
+![Maze puzzle — draw a line from the laptop to the data center](/img/exercises/mindset_2.png)
 
 <br />
 <br />
@@ -80,7 +80,7 @@ Count the triangles. How many are shown?
 
 Answer: 
 
-![](/img/exercises/mindset_3.png)
+![Triangle puzzle — count the total number of triangles shown](/img/exercises/mindset_3.png)
 
 ---------------------------------
 ### Word Puzzle
@@ -116,7 +116,7 @@ Contemplate the following and think of areas in which common misconceptions or b
 
 Given the red dots are areas in which combat aircraft are often hit during engagement, what does the following diagram indicate? What would be your recommendations for additional armoring of the aircraft?
 
-![](/img/exercises/mindset_7.png)
+![WWII aircraft survivorship bias diagram showing bullet hole locations on returning planes](/img/exercises/mindset_7.png)
 
 
 ---
@@ -146,13 +146,13 @@ The following are possible answers to the puzzles.
 
 ### 9 Dot Puzzle
 
-![](/img/exercises/mindset_5.png)
+![Nine dot puzzle solutions showing lines extending beyond the grid boundaries](/img/exercises/mindset_5.png)
 
 Possible answers are shown. How does your solution compare?
 
 ### Maze Challenge
 
-![](/img/exercises/mindset_6.png)
+![Maze challenge solution — path drawn from laptop to data center](/img/exercises/mindset_6.png)
 
 When thinking about solutions to problems, don’t let assumptions and limitations prevent possible solutions.
 

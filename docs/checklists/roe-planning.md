@@ -26,14 +26,14 @@ The ROE document covers numerous topics. Some include:
 
 The ROE documents the target information, approvals, threat implementation, activities, and issues required to staff, coordinate, and execute engagements within the target environment. 
 
-The main body of the ROE (often derived from a standing template) provides information on:
+The main body of the ROE (often derived from a [standing template](/docs/Templates/roe_template/)) provides information on:
 
 * The Red Team methodology
 * A high-level description of the types of activities that may be executed
 * The types of hardware and software that may be employed
 * A recommended deconfliction process
 * Levels of threat available (comparison)
-* Roles and responsibilities of each functional group (Exercise Control Group (ECG), White Cell, Training Audience (TA), etc.)
+* [Roles and responsibilities](/docs/Concepts/role-relationships/) of each functional group (Exercise Control Group (ECG), White Cell, Training Audience (TA), etc.)
 * The identification of and references to appropriate legal requirements (PCI, FERPA, HIPAA, HITEC, SOX, GLBA, etc.)
 * A legal responsibility disclaimer (federally mandated requirements for the Red Team to report certain findings)
 
