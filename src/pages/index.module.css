@@ -4,7 +4,7 @@
 
 .hero {
   position: relative;
-  padding: 80px 24px 64px;
+  padding: 56px 24px 40px;
   text-align: center;
   background: var(--bg-base);
   overflow: hidden;
@@ -58,48 +58,50 @@ html[data-theme='light'] .heroWatermark {
    ========================================================================== */
 
 .searchBar {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 14px 20px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 28px;
+  background: transparent;
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+  color: var(--accent-gold);
+  text-decoration: none;
   cursor: pointer;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: all 0.2s;
 }
 
 .searchBar:hover,
 .searchBar:focus {
-  border-color: var(--accent-teal);
-  box-shadow: 0 0 0 3px rgba(1, 181, 194, 0.08);
+  background: var(--accent-gold);
+  color: #000;
+  text-decoration: none;
   outline: none;
 }
 
 .searchIcon {
-  width: 18px;
-  height: 18px;
-  color: var(--text-dim);
+  width: 16px;
+  height: 16px;
+  color: inherit;
   flex-shrink: 0;
-  margin-right: 12px;
 }
 
 .searchText {
-  flex: 1;
-  text-align: left;
-  font-size: 0.95rem;
-  color: var(--text-dim);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: inherit;
 }
 
 .searchShortcut {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
-  color: var(--text-dim);
-  background: var(--bg-card);
-  padding: 2px 8px;
+  font-size: 0.65rem;
+  color: inherit;
+  opacity: 0.6;
+  background: none;
+  padding: 2px 6px;
   border-radius: 4px;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid currentColor;
 }
 
 /* ==========================================================================

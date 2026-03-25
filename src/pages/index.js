@@ -57,16 +57,6 @@ const highlights = [
 ];
 
 function HomepageHero() {
-  const handleSearchClick = () => {
-    const input = document.querySelector(
-      '.navbar input[type="search"], .navbar input[placeholder="Search"]',
-    );
-    if (input) {
-      input.focus();
-      input.click();
-    }
-  };
-
   return (
     <header className={styles.hero}>
       <div className={styles.heroContent}>
@@ -82,12 +72,7 @@ function HomepageHero() {
         <p className={styles.heroSubtitle}>
           A reference for red team operations
         </p>
-        <div
-          className={styles.searchBar}
-          onClick={handleSearchClick}
-          onKeyDown={(e) => e.key === 'Enter' && handleSearchClick()}
-          role="button"
-          tabIndex={0}>
+        <Link to="/search/" className={styles.searchBar}>
           <svg
             className={styles.searchIcon}
             viewBox="0 0 20 20"
@@ -100,8 +85,7 @@ function HomepageHero() {
           <span className={styles.searchText}>
             Search guides, templates, definitions...
           </span>
-          <kbd className={styles.searchShortcut}>⌘K</kbd>
-        </div>
+        </Link>
       </div>
     </header>
   );
