@@ -2,7 +2,7 @@
 title: Welcome to the Red Team Guide Blog
 authors: [joe, james]
 tags: [red-team, announcements]
-description: Introducing the Red Team Guide blog — a new home for red team tradecraft, tools, and operational insights.
+description: ReIntroducing the Red Team Guide as a blog — a new home for red team tradecraft, tools, and operational insights.
 ---
 
 Welcome to the Red Team Guide blog.
