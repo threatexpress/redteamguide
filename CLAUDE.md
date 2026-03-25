@@ -32,7 +32,7 @@ No test suite or linter scripts are configured. Prettier and Stylelint are insta
 
 ## CI/CD
 
-GitHub Actions workflow (`.github/workflows/deploy.yml`): on push/PR to `main`, installs with Yarn, builds, deploys `./build/` to `gh-pages` branch via `peaceiris/actions-gh-pages`. Requires Node 20+.
+GitHub Actions workflow (`.github/workflows/deploy.yml`): on push/PR to `main`, installs with Yarn, builds, uploads artifact via `actions/upload-pages-artifact`, deploys via `actions/deploy-pages`. Requires Node 22+. Custom domain preserved via `static/CNAME`.
 
 ## Current Visual Design
 
@@ -83,9 +83,11 @@ Search-first landing page (`src/pages/index.js` + `src/pages/index.module.css`):
 
 - **GA4**: Google Analytics 4 enabled via `@docusaurus/plugin-google-gtag` (measurement ID `G-S9YDP7R6HD`)
 - **Schema markup**: JSON-LD structured data in `docusaurus.config.mjs` `headTags` (WebSite, Organization) and `src/pages/index.js` (Book). Validate at https://search.google.com/test/rich-results
-- **Sitemap**: Auto-generated at `/sitemap.xml` by `@docusaurus/preset-classic`
+- **Sitemap**: Auto-generated at `/sitemap.xml` by `@docusaurus/preset-classic` with `lastmod: 'date'`
 - **robots.txt**: `static/robots.txt` — allows all crawlers, references sitemap
 - **Meta tags**: Twitter Card and Open Graph tags configured in `themeConfig.metadata`
+- **Trailing slash**: `trailingSlash: true` in config — required for GitHub Pages clean URL routing
+- **CNAME**: `static/CNAME` — preserves custom domain (`redteam.guide`) across deploys
 
 ## Content Editing
 
@@ -102,18 +104,18 @@ Search-first landing page (`src/pages/index.js` + `src/pages/index.module.css`):
 ### Blog Posts
 
 - Create new posts as `blog/YYYY-MM-DD-slug/index.md` with co-located images
-- Required frontmatter: `title`, `authors` (from `blog/authors.yml`), `tags`, `slug`
+- Required frontmatter: `title`, `authors` (from `blog/authors.yml`), `tags`, `slug`, `description` (150-160 chars for SERP snippets)
 - Add `<!-- truncate -->` after the first paragraph for blog list excerpts
 - Authors: `joe`, `james`, `andrewchiles` (defined in `blog/authors.yml`)
-- Images: place in the post folder and reference as `./filename.png`
+- Images: place in the post folder and reference as `./filename.png` — always include descriptive alt text
 
 ## Pages
 
 - `/` — Homepage (search-first landing page)
-- `/docs/guides` — Red Team Guides index
-- `/docs/about_the_book` — Book page with cover, purchase links, YouTube embed, author bios
-- `/docs/about_the_authors` — Author page
-- `/docs/definitions` — Red teaming definitions
-- `/blog` — Blog with RSS/Atom feeds
-- `/privacy` — Privacy policy (required for GA4 compliance)
-- `/disclaimer` — Disclaimer for offensive security content
+- `/docs/guides/` — Red Team Guides index
+- `/docs/about_the_book/` — Book page with cover, purchase links, YouTube embed, author bios
+- `/docs/about_the_authors/` — Author page
+- `/docs/definitions/` — Red teaming definitions
+- `/blog/` — Blog with RSS/Atom feeds
+- `/privacy/` — Privacy policy (required for GA4 compliance)
+- `/disclaimer/` — Disclaimer for offensive security content
