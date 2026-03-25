@@ -2,7 +2,7 @@ import blink from './src/blink/index.js';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'RedTeam.Guide',
+  title: 'Red Team Guide',
   tagline: 'A reference for red team operations',
   url: 'https://redteam.guide',
   baseUrl: '/',
@@ -34,7 +34,7 @@ const config = {
   themeConfig: {
     metadata: [
       {name: 'twitter:card', content: 'summary_large_image'},
-      {name: 'twitter:title', content: 'RedTeam.Guide'},
+      {name: 'twitter:title', content: 'Red Team Guide'},
       {name: 'twitter:description', content: 'Guides, templates, and tradecraft for red team operations by Joe Vest and James Tubberville'},
       {name: 'twitter:image', content: 'https://redteam.guide/img/og-image.png'},
       {property: 'og:type', content: 'website'},
