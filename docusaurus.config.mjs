@@ -33,12 +33,12 @@ const config = {
 
   themeConfig: {
     metadata: [
-      {name: 'twitter:card', content: 'summary'},
+      {name: 'twitter:card', content: 'summary_large_image'},
       {name: 'twitter:title', content: 'Red Team Development and Operations'},
       {name: 'twitter:description', content: 'Guides, templates, and tradecraft for red team operations by Joe Vest and James Tubberville'},
-      {name: 'twitter:image', content: 'https://redteam.guide/img/books.png'},
+      {name: 'twitter:image', content: 'https://redteam.guide/img/og-image.png'},
       {property: 'og:type', content: 'website'},
-      {property: 'og:image', content: 'https://redteam.guide/img/books.png'},
+      {property: 'og:image', content: 'https://redteam.guide/img/og-image.png'},
       {property: 'og:description', content: 'Guides, templates, and tradecraft for red team operations by Joe Vest and James Tubberville'},
     ],
     navbar: {
