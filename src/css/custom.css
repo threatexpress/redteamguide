@@ -578,6 +578,11 @@ article[class*='blogPost'] {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+/* Blog post page title */
+header[class*='blogPostHeader'] h1 {
+  font-size: 2rem;
+}
+
 article[class*='blogPost']:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-glow-hover);

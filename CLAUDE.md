@@ -107,7 +107,7 @@ Search-first landing page (`src/pages/index.js` + `src/pages/index.module.css`):
 - Required frontmatter: `title`, `authors` (from `blog/authors.yml`), `tags`, `slug`, `description` (150-160 chars for SERP snippets)
 - Add `<!-- truncate -->` after the first paragraph for blog list excerpts
 - Authors: `joe`, `james`, `andrewchiles` (defined in `blog/authors.yml`)
-- Images: place in the post folder and reference as `./filename.png` — always include descriptive alt text
+- Images: place in the post folder and reference as `./filename.png` — always include descriptive alt text. Use underscores instead of spaces in file names (e.g., `my_image.png`, not `my image.png`)
 
 ## Pages
 
